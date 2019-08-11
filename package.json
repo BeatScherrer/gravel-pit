@@ -1,0 +1,21 @@
+{
+    "name": "gravel-pit",
+    "displayName": "gravel-pit",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.37.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "gravel-pit",
+                "uiTheme": "vs-dark",
+                "path": "./themes/gravel-pit-color-theme.json"
+            }
+        ]
+    }
+}
