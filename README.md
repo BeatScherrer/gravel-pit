@@ -1,13 +1,24 @@
-# README
-## This is the README for your extension "gravel-pit"
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+# Gravel Pit Color Theme
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
+![gravel-pit example](https://raw.githubusercontent.com/BeatScherrer/gravel-pit/master/gravel_pit_example.png)
 
-### For more information
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+Welcome to my color theme. Since I was unhappy with many color themes for C++ I decided to create my own and publish it.
+The theme is oriented on earthy colors which are light to the eye for the basic entities. highly interesting entities such as objects, variables, methods and function are given a brighter color to immediately differentiate them.
+The colors range from anything that can be found in a pit from dirt to water and even gemstones, and thus the name.
 
-**Enjoy!**
+_The theme is still under heavy development and thus will change often._
+
+## C++
+The main items which I want to differentiate for C++ explicitly from the rest are the following:
+* **Functions** and **methods**:
+It should be clear on first sight what is a function, a method and visually separate them from the rest.
+
+
+## Reference for tokens:
+https://www.sublimetext.com/docs/3/scope_naming.html
+
+A very useful extension for better C++ Syntax highlighting is provided by the following extension:
+[Better C++ Syntax](https://marketplace.visualstudio.com/items?itemName=jeff-hykin.better-cpp-syntax)
+
+# Contribution
+Contribution for other languages are very welcome to create a consistent and complete theme across various languages.
