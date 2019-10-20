@@ -1,6 +1,6 @@
 # Gravel Pit Color Theme
 
-![gravel-pit example](https://raw.githubusercontent.com/BeatScherrer/gravel-pit/master/gravel_pit_example.png)
+![gravel-pit example](https://raw.githubusercontent.com/BeatScherrer/gravel-pit/master/Screenshot%20from%202019-08-12%2014-45-23.png)
 
 Welcome to my color theme. Since I was unhappy with many color themes for C++ I decided to create my own and publish it.
 The theme is oriented on earthy colors which are light to the eye for the basic entities. highly interesting entities such as objects, variables, methods and function are given a brighter color to immediately differentiate them.

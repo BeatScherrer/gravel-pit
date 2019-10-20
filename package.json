@@ -2,7 +2,7 @@
     "name": "gravel-pit",
     "displayName": "Gravel Pit",
     "description": "",
-    "version": "0.4.0",
+    "version": "0.6.0",
     "engines": {
         "vscode": "^1.36.1"
     },
