@@ -23,6 +23,8 @@ namespace foo {
     // Member functions are green, such as classes
         Foo();
 
+        Foo(const Foo& obj);
+
         ~Foo();
 
         virtual Foo* getSelf() { return this; }
@@ -59,6 +61,8 @@ class templateClass{
 public:
     templateClass(T arg1, T arg2) : member_variable_1(arg1), member_variable_2(arg_2) {}
 
+    void memberFunction();
+
     T getMember1(){ return member_variable_1; }
     T getMember2(){ return member_variable_2; }
     
@@ -66,6 +70,9 @@ private:
     T member_variable_1;
     T member_variable_2;
 };
+
+template<typename T>
+templateClass<T>::memberFunction() { return;}
 
 
 struct FooPOD {
@@ -82,6 +89,7 @@ struct FooC {
 
 class FooB : FooC {
     int i;
+    uint16_t another_member;
 };
 
 extern int a = 1;

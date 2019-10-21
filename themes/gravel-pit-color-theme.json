@@ -53,8 +53,10 @@
       "scope": [
         // General
         "storage",
+        "entity.name.namespace",
         "entity.name.scope-resolution",
         "keyword.operator",
+        "punctuation.terminator",
         // HTML
         "punctuation.definition.tag",
         "support.type.property-name",
@@ -69,7 +71,7 @@
       "name": "class 2",
       "scope": ["entity.name.type.class", "variable.language.this"],
       "settings": {
-        "foreground": "#85f8a2"
+        "foreground": "#589c69"
       }
     },
     {
@@ -100,7 +102,12 @@
     },
     {
       "name": "Template",
-      "scope": ["storage.type.template", "markup.inline"],
+      "scope": [
+        // General
+        "storage.type.template",
+        // Markup
+        "markup.inline"
+      ],
       "settings": {
         "foreground": "#d477ff"
       }
