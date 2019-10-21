@@ -31,15 +31,60 @@
       }
     },
     {
+      "name": "Function Arguments",
+      "scope": [
+        // General
+        "variable.parameter",
+        // Markup
+        "punctuation.definition.list.begin.markdown",
+        "punctuation.definition.bold",
+        "punctuation.definition.italic",
+        "markup.italic",
+        "markup.bold",
+        // HTML
+        "entity.other.attribute-name"
+      ],
+      "settings": {
+        "foreground": "#ffa155"
+      }
+    },
+    {
       "name": "class",
-      "scope": ["storage"],
+      "scope": [
+        // General
+        "storage",
+        "entity.name.scope-resolution",
+        // HTML
+        "punctuation.definition.tag",
+        "support.type.property-name",
+        // TS
+        "meta.object-literal.key.ts"
+      ],
       "settings": {
         "foreground": "#ffeac3"
       }
     },
     {
+      "name": "member variables",
+      "scope": [
+        "variable.other.property",
+        // JS
+        "support.type.primitive"
+      ],
+      "settings": {
+        "foreground": "#85f8a2"
+      }
+    },
+    {
       "name": "Preprocessor",
-      "scope": ["keyword"],
+      "scope": [
+        // General
+        "keyword",
+        // Markup
+        "markup.heading",
+        // HTML
+        "entity.name.tag"
+      ],
       "settings": {
         "foreground": "#FF5e5e",
         "fontStyle": "bold"
@@ -47,7 +92,7 @@
     },
     {
       "name": "Template",
-      "scope": ["storage.type.template"],
+      "scope": ["storage.type.template", "markup.inline"],
       "settings": {
         "foreground": "#d477ff"
       }
