@@ -77,7 +77,7 @@ struct FooPOD {
 };
 
 struct FooC {
-
+  int i;
 };
 
 class FooB : FooC {

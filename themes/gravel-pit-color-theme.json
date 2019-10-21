@@ -49,7 +49,7 @@
       }
     },
     {
-      "name": "class",
+      "name": "class 1",
       "scope": [
         // General
         "storage",
@@ -63,6 +63,13 @@
       ],
       "settings": {
         "foreground": "#ffeac3"
+      }
+    },
+    {
+      "name": "class 2",
+      "scope": ["entity.name.type.class", "variable.language.this"],
+      "settings": {
+        "foreground": "#85f8a2"
       }
     },
     {
