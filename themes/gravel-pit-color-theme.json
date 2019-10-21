@@ -54,6 +54,7 @@
         // General
         "storage",
         "entity.name.scope-resolution",
+        "keyword.operator",
         // HTML
         "punctuation.definition.tag",
         "support.type.property-name",
