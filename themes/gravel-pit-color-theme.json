@@ -57,9 +57,10 @@
         "entity.name.scope-resolution",
         "keyword.operator",
         "punctuation.terminator",
-        // HTML
+        // HTML & CSS
         "punctuation.definition.tag",
         "support.type.property-name",
+        "keyword.control.unit",
         // TS
         "meta.object-literal.key.ts"
       ],
@@ -96,8 +97,7 @@
         "entity.name.tag"
       ],
       "settings": {
-        "foreground": "#FF5e5e",
-        "fontStyle": "bold"
+        "foreground": "#FF5e5e"
       }
     },
     {
