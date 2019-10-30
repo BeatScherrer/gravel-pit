@@ -12,7 +12,7 @@
       "name": "Comments",
       "scope": ["comment"],
       "settings": {
-        "foreground": "#4e4e4e",
+        "foreground": "#8a8a8a",
         "fontStyle": "italic"
       }
     },
@@ -94,7 +94,7 @@
         // Markup
         "markup.heading",
         // HTML
-        "entity.name.tag"
+        "entity.name.tag",
       ],
       "settings": {
         "foreground": "#FF5e5e"
