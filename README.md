@@ -23,6 +23,21 @@ A very useful extension for better C++ Syntax highlighting is provided by the fo
 # Contribution
 Contribution for other languages are very welcome to create a consistent and complete theme across various languages.
 
+## Jsonnet
+The theme is developed with [jsonnet](https://jsonnet.org/learning/tutorial.html) which allows to define variables and generate a `.json` file. This makes changes to colors a lot easier since they dont have to be hardcoded.
+
+### Installation
+with arch based distros simply install jsonnet with the AUR helper:
+```
+yay jsonnet
+```
+
+### Build
+To build the `.json` file which ultimately is used in the theme run:
+```
+jsonnet gravel-pit-color-theme.jsonnet > themes/gravel-pit-color-theme.json
+```
+
 # TODO
  - Terminal colors (especially color links)
  - improve C++ color scheme

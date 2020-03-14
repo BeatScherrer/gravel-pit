@@ -5,7 +5,40 @@
     "editor.background": "#252525",
     "editor.foreground": "#eeffff",
     "activityBarBadge.background": "#007acc",
-    "sideBarTitle.foreground": "#bbbbbb"
+    "sideBarTitle.foreground": "#bbbbbb",
+    // "terminal.background": "#ff0000",
+    // "terminal.foreground": "#ff0000",
+    // "terminal.selectionBackground": "#ff0000",
+    "terminal.ansiBlack": "#000000",
+    "terminal.ansiBrightBlack": "#555555",
+    "terminal.ansiBlue": "#6699CC",
+    "terminal.ansiBrightBlue": "#6699CC",
+    "terminal.ansiGreen": "#00ff40",
+    "terminal.ansiBrightGreen": "#85ffa4",
+    "terminal.ansiMagenta": "#d477ff",
+    "terminal.ansiBrightMagenta": "#d477ff",
+    "terminal.ansiRed": "#FF5E5E",
+    "terminal.ansiBrightRed": "#FF5E5E",
+    "terminal.ansiWhite": "#BBBBBB",
+    "terminal.ansiBrightWhite": "#FFFFFF",
+    "terminal.ansiYellow": "#ffeac3",
+    "terminal.ansiBrightYellow": "#ffeac3",
+    "terminal.ansiCyan": "#56fff1",
+    "terminal.ansiBrightCyan": "#56fff1",
+    // "gitDecoration.addedResourceForeground": "#ff0000",
+    // "gitDecoration.conflictingResourceForeground": "#ff0000",
+    // "gitDecoration.deletedResourceForeground": "#ff0000",
+    // "gitDecoration.ignoredResourceForeground": "#ff0000",
+    // "gitDecoration.modifiedResourceForeground": "#ff0000",
+    // "gitDecoration.submoduleResourceForeground": "#ff0000",
+    // "gitDecoration.untrackedResourceForeground": "#ff0000",
+    // "minimap.errorHighlight": "#ff0000",
+    // "minimap.findMatchHighlight": "#ff0000",
+    // "minimap.selectionHighlight": "#ff0000",
+    // "minimap.warningHighlight": "#ff0000",
+    // "minimapGutter.addedBackground": "#ff0000",
+    // "minimapGutter.deletedBackground": "#ff0000",
+    // "minimapGutter.modifiedBackground": "#ff0000",
   },
   "tokenColors": [
     {
@@ -46,7 +79,7 @@
         "punctuation.terminator.statement"
       ],
       "settings": {
-        "foreground": "#777777"
+        "foreground": "#aaaaaa"
       }
     },
     {
@@ -150,7 +183,7 @@
       "settings": {
         "foreground": "#ff9035"
       }
-    },	
+    },
     {
       "name": "Class and Struct",
       "scope" : [
@@ -210,7 +243,7 @@
       "settings": {
         "foreground": "#ffffff"
       }
-    },	
+    },
     {
       "name": "Control Keywords",
       "scope": [
@@ -236,6 +269,6 @@
       "settings": {
         "foreground": "#ffffff"
       }
-    }
+    },
   ]
 }
