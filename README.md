@@ -22,3 +22,7 @@ A very useful extension for better C++ Syntax highlighting is provided by the fo
 
 # Contribution
 Contribution for other languages are very welcome to create a consistent and complete theme across various languages.
+
+# TODO
+ - Terminal colors (especially color links)
+ - improve C++ color scheme
