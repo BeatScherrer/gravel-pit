@@ -38,6 +38,9 @@ To build the `.json` file which ultimately is used in the theme run:
 jsonnet gravel-pit-color-theme.jsonnet > themes/gravel-pit-color-theme.json
 ```
 
+## Develop
+to develop run the
+
 # TODO
  - Terminal colors (especially color links)
  - improve C++ color scheme
