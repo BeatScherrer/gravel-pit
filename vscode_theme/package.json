@@ -1,23 +1,22 @@
-
 {
-  "name": "gravel-pit",
-  "displayName": "Gravel Pit",
-  "description": "",
-  "version": "0.4.0",
-  "engines": {
-      "vscode": "^1.36.1"
-  },
-  "categories": [
-      "Themes"
-  ],
-  "contributes": {
-      "themes": [
-          {
-              "label": "gravel-pit",
-              "uiTheme": "vs-dark",
-              "path": "./themes/gravel-pit-color-theme.json"
-          }
-      ]
-  },
-  "publisher": "BeatScherrer"
+    "name": "gravel-pit",
+    "displayName": "Gravel Pit",
+    "description": "",
+    "version": "0.14.0",
+    "engines": {
+        "vscode": "^1.36.1"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "gravel-pit",
+                "uiTheme": "vs-dark",
+                "path": "./themes/gravel-pit-color-theme.json"
+            }
+        ]
+    },
+    "publisher": "BeatScherrer"
 }

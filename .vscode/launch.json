@@ -10,7 +10,7 @@
             "name": "Launch Extension",
             "runtimeExecutable": "${execPath}",
             "args": [
-                "--extensionDevelopmentPath=${workspaceFolder}"
+                "--extensionDevelopmentPath=${workspaceFolder}/vscode_theme/"
             ],
             "outFiles": [
                 "${workspaceFolder}/out/**/*.js"

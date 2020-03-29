@@ -1,14 +1,16 @@
   // colors to be used
   local color = {
+
+    // terminal colors
     black: "#000000",
     bright_black: "#4e4e4e",
-    white: "",
-    bright_white: "",
-    red: "#FF5E5E",
+    white: "#bbbbbb",
+    bright_white: "#eeffff",
+    red: "#ff5e5e",
     bright_red: "",
-    green: "",
-    bright_green: "",
-    blue: "#007acc",
+    green: "#589c69",
+    bright_green: "#85f8a2",
+    blue: "#6699cc",
     bright_blue: "",
     yellow: "#ffeac3",
     bright_yellow: "#ffeac3",
@@ -17,7 +19,9 @@
     cyan: "#56fff1",
     bright_cyan: "#56fff1",
 
-    gray: "#4e4e4e",
+    // theme colors
+    gray: "#8a8a8a",
+    dark_gray: "#252525",
     orange: "#ff9035",
     sand: "#ffeac3"
   };
@@ -27,15 +31,15 @@
   name: "gravel-pit",
   type: "dark",
   colors: {
-    "editor.background": color.black,
-    "editor.foreground": "#eeffff",
+    "editor.background": color.dark_gray,
+    "editor.foreground": color.bright_white,
     "activityBarBadge.background": "#007acc",
     "sideBarTitle.foreground": color.white,
-    // "terminal.background": color.black,
-    // "terminal.foreground": "#ff0000",
-    // "terminal.selectionBackground": "#ff0000",
+    "terminal.background": color.dark_gray,
+    "terminal.foreground": color.white,
+    "terminal.selectionBackground": "#ff0000",
     "terminal.ansiBlack": color.black,
-    "terminal.ansiBrightBlack": "#555555",
+    "terminal.ansiBrightBlack": color.bright_black,
     "terminal.ansiBlue": color.blue,
     "terminal.ansiBrightBlue": color.bright_blue,
     "terminal.ansiGreen": color.green,
@@ -50,20 +54,20 @@
     "terminal.ansiBrightYellow": color.bright_yellow,
     "terminal.ansiCyan": color.cyan,
     "terminal.ansiBrightCyan": color.bright_cyan,
-    "gitDecoration.addedResourceForeground": color.green,
-    "gitDecoration.conflictingResourceForeground": color.magenta,
-    "gitDecoration.deletedResourceForeground": color.red,
-    "gitDecoration.ignoredResourceForeground": color.gray,
-    "gitDecoration.modifiedResourceForeground": color.orange,
+    // "gitDecoration.addedResourceForeground": color.green,
+    // "gitDecoration.conflictingResourceForeground": color.magenta,
+    // "gitDecoration.deletedResourceForeground": color.red,
+    // "gitDecoration.ignoredResourceForeground": color.gray,
+    // "gitDecoration.modifiedResourceForeground": color.orange,
     // "gitDecoration.submoduleResourceForeground": "#ff0000",
-    "gitDecoration.untrackedResourceForeground": color.gray,
-    "minimap.errorHighlight": color.red,
-    "minimap.findMatchHighlight": color.yellow,
-    "minimap.selectionHighlight": color.cyan,
-    "minimap.warningHighlight": color.orange,
-    "minimapGutter.addedBackground": color.green,
-    "minimapGutter.deletedBackground": color.red,
-    "minimapGutter.modifiedBackground": color.yellow,
+    // "gitDecoration.untrackedResourceForeground": color.gray,
+    // "minimap.errorHighlight": color.red,
+    // "minimap.findMatchHighlight": color.yellow,
+    // "minimap.selectionHighlight": color.cyan,
+    // "minimap.warningHighlight": color.orange,
+    // "minimapGutter.addedBackground": color.green,
+    // "minimapGutter.deletedBackground": color.red,
+    // "minimapGutter.modifiedBackground": color.yellow,
   },
   tokenColors: [
     {
@@ -92,10 +96,12 @@
         "punctuation.section",
         "punctuation.terminator.statement",
         "punctuation.definition.parameters",
-        "punctuation.definition.dictionary"
+        "punctuation.definition.dictionary",
+        "punctuation.separator.dot-access",
+        "punctuation.separator.pointer-access"
       ],
       settings: {
-        foreground: color.white
+        foreground: color.sand
       }
     },
     {
@@ -144,7 +150,8 @@
         "keyword.control.directive.conditional",
         "keyword.control.directive.define",
         "keyword.control.directive.include",
-        "markup.list.unnumbered"
+        "keyword.other.using.directive.cpp",
+        "markup.list.unnumbered",
       ],
       settings: {
         foreground: color.red
@@ -164,26 +171,19 @@
     {
       name: "includes",
       scope: [
-        "string.quoted.other.lt-gt.include.cpp"
+        "string.quoted.other.lt-gt.include.cpp",
+        "string.quoted.double.include"
       ],
       settings: {
-        foreground: color.sand
-      }
-    },
-    {
-      name: "Function Declarations",
-      scope: [
-        "meta.function",
-        "markup.italic"
-      ],
-      settings: {
-        foreground: color.blue
+        foreground: color.cyan
       }
     },
     {
       name: "Function Call",
       scope: [
         "entity.name.function.call",
+        "entity.name.function.member",
+        "markup.italic"
       ],
       settings: {
         foreground: color.blue
@@ -192,8 +192,7 @@
     {
       name: "Methods",
       scope: [
-        "entity.name.function.member",
-
+        "entity.name.function.definition",
         "markup.bold"
       ],
       settings: {
@@ -213,10 +212,21 @@
       name: "Class and Struct",
       scope : [
         "entity.name.type.class",
-        "entity.name.type.struct"
+        "entity.name.type.struct",
+        "entity.name.function.definition.special.constructor"
       ],
       settings: {
         foreground: color.green
+      }
+    },
+    {
+      name: "Member variables",
+      scope: [
+        "variable.other.property.cpp",
+        "variable.other.object.access.cpp"
+      ],
+      settings: {
+        foreground: color.bright_green
       }
     },
     {
@@ -227,16 +237,6 @@
       ],
       settings: {
         foreground: color.sand
-      }
-    },
-    {
-      name: "Special Methods",
-      scope: [
-        "entity.name.function.constructor",
-        "entity.name.function.destructor"
-      ],
-      settings: {
-        foreground: color.green
       }
     },
     {
@@ -266,13 +266,14 @@
         "variable"
       ],
       settings: {
-        foreground: color.white
+        foreground: color.bright_white
       }
     },
     {
       name: "Control Keywords",
       scope: [
-        "keyword.control"
+        "keyword.control",
+        "constant.language.NULL"
       ],
       settings: {
         foreground: color.red

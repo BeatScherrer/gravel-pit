@@ -6,8 +6,24 @@
     {
       "label": "build theme",
       "type": "shell",
-      "command": "bash ${workspaceFolder}/build.bash",
+      "command": "bazel build //gravel-pit:gravel-pit && cp ${workspaceFolder}/vscode_theme/bazel-bin/gravel-pit/*.json ${workspaceFolder}/vscode_theme/themes",
       "problemMatcher": [],
+      "options": {
+        "cwd": "vscode_theme"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "publish theme"
+      "type": "shell",
+      "command": "vsce publish",
+      "problemMatcher": [],
+      "options": {
+        "cwd": "vscode_theme"
+      },
       "group": {
         "kind": "build",
         "isDefault": true
