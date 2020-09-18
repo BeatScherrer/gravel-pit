@@ -84,7 +84,8 @@
     {
       name: "String",
       scope: [
-        "string"
+        "string",
+        "entity.name.section.latex"
       ],
       settings: {
         foreground: color.cyan
@@ -190,6 +191,11 @@
         "entity.name.function.member",
         "support.function.builtin",
         "support.function.powershell",
+        "support.function.be",
+        "support.function.section.latex",
+        "support.function.texttt.latex",
+        "support.function.emph.latex",
+        "support.function.general.tex",
         "meta.function-call",
         "markup.italic"
       ],
@@ -237,7 +243,8 @@
         "variable.other.object.access.cpp",
         "variable.other.object.property",
         "variable.other.member",
-        "meta.attribute"
+        "meta.attribute",
+        "meta.math.block"
       ],
       settings: {
         foreground: color.bright_green
@@ -288,7 +295,8 @@
       scope: [
         "keyword.control",
         "keyword.other.array.begin",
-        "constant.language.NULL"
+        "constant.language.NULL",
+        "keyword.other.item.latex",
       ],
       settings: {
         foreground: color.red

@@ -27,19 +27,27 @@ Contribution for other languages are very welcome to create a consistent and com
 The theme is developed with [jsonnet](https://jsonnet.org/learning/tutorial.html) which allows to define variables and generate a `.json` file. This makes changes to colors a lot easier since they dont have to be hardcoded.
 
 ### Installation
+(recommended) for building with bazel install bazel:
+```
+yay bazel
+```
+
 with arch based distros simply install jsonnet with the AUR helper:
 ```
 yay jsonnet
 ```
 
 ### Build
-To build the `.json` file which ultimately is used in the theme run:
+To build the themes from the `.jsonnet` files run the following command in the `vscode_theme` directory as the working directory.
 ```
-jsonnet gravel-pit-color-theme.jsonnet > themes/gravel-pit-color-theme.json
+bazel build //gravel-pit:all
 ```
 
-## Develop
-to develop run the
+## Developing
+Developing the color themes is easy. Simply open the repo and run the debugger with `f5`. A new windows should open where the local themes in the `themes` folder can be selected.
+
+When making updates to the `.jsonnet` file to see the changes the build task must be executed which also copies the generated `.json` files to the `themes` directory. Run the build task with `Ctrl + b` and select 'build theme'.
+
 
 # TODO
  - Terminal colors (especially color links)
