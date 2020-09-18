@@ -6,7 +6,7 @@ Welcome to my color theme. Since I was unhappy with many color themes for C++ I 
 The theme is oriented on earthy colors which are light to the eye for the basic entities. highly interesting entities such as objects, variables, methods and function are given a brighter color to immediately differentiate them.
 The colors range from anything that can be found in a pit from dirt to water and even gemstones, and thus the name.
 
-_The theme is still under heavy development and thus will change often._
+_The theme is still under development and thus will change often._
 
 ## C++
 The main items which I want to differentiate for C++ explicitly from the rest are the following:
