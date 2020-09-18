@@ -7,7 +7,7 @@
     white: "#bbbbbb",
     bright_white: "#eeffff",
     red: "#ff5e5e",
-    bright_red: "",
+    bright_red: "#aa5e5e",
     green: "#589c69",
     bright_green: "#85f8a2",
     blue: "#6699cc",
@@ -23,37 +23,56 @@
     gray: "#8a8a8a",
     dark_gray: "#252525",
     orange: "#ff9035",
-    sand: "#ffeac3"
+    sand: "#beaf91",
+
+
+  //  Theme colors:
+  background: "#DDDDDD",
+  foreground: color.bright_black,
+
+  comment_color: color.gray,
+  string_color: color.cyan,
+  punctuation_color: color.sand,
+  operators_color: color.red,
+  keyword_color: color.red,
+  function_color: color.blue,
+  function_argument_color: color.orange,
+  class_color: color.green,
+  member_color: color.bright_green,
+  constants_color: color.bright_red,
+  variables_color: color.black
   };
+
+
 
 {
   // Settings
-  name: "gravel-pit",
-  type: "dark",
+  name: "gravel-pit-light",
+  type: "light",
   colors: {
-    "editor.background": color.dark_gray,
-    "editor.foreground": color.bright_white,
+    "editor.background": color.background,
+    "editor.foreground": color.foreground,
     "activityBarBadge.background": "#007acc",
     "sideBarTitle.foreground": color.white,
-    "terminal.background": color.dark_gray,
-    "terminal.foreground": color.white,
-    "terminal.selectionBackground": "#ff0000",
-    "terminal.ansiBlack": color.black,
-    "terminal.ansiBrightBlack": color.bright_black,
-    "terminal.ansiBlue": color.blue,
-    "terminal.ansiBrightBlue": color.bright_blue,
-    "terminal.ansiGreen": color.green,
-    "terminal.ansiBrightGreen": color.bright_green,
-    "terminal.ansiMagenta": color.magenta,
-    "terminal.ansiBrightMagenta": color.bright_magenta,
-    "terminal.ansiRed": color.red,
-    "terminal.ansiBrightRed": color.bright_red,
-    "terminal.ansiWhite": color.white,
-    "terminal.ansiBrightWhite": color.bright_white,
-    "terminal.ansiYellow": color.yellow,
-    "terminal.ansiBrightYellow": color.bright_yellow,
-    "terminal.ansiCyan": color.cyan,
-    "terminal.ansiBrightCyan": color.bright_cyan,
+    // "terminal.background": color.dark_gray,
+    // "terminal.foreground": color.white,
+    // "terminal.selectionBackground": "#ff0000",
+    // "terminal.ansiBlack": color.black,
+    // "terminal.ansiBrightBlack": color.bright_black,
+    // "terminal.ansiBlue": color.blue,
+    // "terminal.ansiBrightBlue": color.bright_blue,
+    // "terminal.ansiGreen": color.green,
+    // "terminal.ansiBrightGreen": color.bright_green,
+    // "terminal.ansiMagenta": color.magenta,
+    // "terminal.ansiBrightMagenta": color.bright_magenta,
+    // "terminal.ansiRed": color.red,
+    // "terminal.ansiBrightRed": color.bright_red,
+    // "terminal.ansiWhite": color.white,
+    // "terminal.ansiBrightWhite": color.bright_white,
+    // "terminal.ansiYellow": color.yellow,
+    // "terminal.ansiBrightYellow": color.bright_yellow,
+    // "terminal.ansiCyan": color.cyan,
+    // "terminal.ansiBrightCyan": color.bright_cyan,
     // "gitDecoration.addedResourceForeground": color.green,
     // "gitDecoration.conflictingResourceForeground": color.magenta,
     // "gitDecoration.deletedResourceForeground": color.red,
@@ -78,7 +97,7 @@
       ],
       settings: {
         fontStyle: "italic",
-        foreground: color.gray
+        foreground: color.comment_color
       }
     },
     {
@@ -87,7 +106,7 @@
         "string"
       ],
       settings: {
-        foreground: color.cyan
+        foreground: color.string_color
       }
     },
     {
@@ -98,19 +117,13 @@
         "punctuation.definition.parameters",
         "punctuation.definition.dictionary",
         "punctuation.separator.dot-access",
-        "punctuation.separator.pointer-access"
+        "punctuation.separator.pointer-access",
+        "punctuation.definition.tag",
+        "punctuation.definition.variable.powershell",
+        "punctuation.terminator"
       ],
       settings: {
-        foreground: color.sand
-      }
-    },
-    {
-      name: "Terminator statement",
-      scope: [
-        "punctuation.terminator.statement"
-      ],
-      settings: {
-        foreground: color.white
+        foreground: color.punctuation_color
       }
     },
     {
@@ -119,7 +132,7 @@
         "keyword.operator",
       ],
       settings: {
-        foreground: color.sand
+        foreground: color.operators_color
       }
     },
     {
@@ -127,10 +140,11 @@
       scope: [
         "storage.type",
         "support.type.property-name.json.comments",
+        "meta.structure.dictionary.json",
         "markup.heading"
       ],
       settings: {
-        foreground: color.sand
+        foreground: color.keyword_color
       }
     },
     {
@@ -151,7 +165,9 @@
         "keyword.control.directive.define",
         "keyword.control.directive.include",
         "keyword.other.using.directive.cpp",
+        "keyword.other.package.java",
         "markup.list.unnumbered",
+        "entity.name.tag",
       ],
       settings: {
         foreground: color.red
@@ -181,18 +197,22 @@
     {
       name: "Function Call",
       scope: [
+        "support.function.powershell",
         "entity.name.function.call",
         "entity.name.function.member",
+        "support.function.builtin",
+        "meta.function-call",
         "markup.italic"
       ],
       settings: {
-        foreground: color.blue
+        foreground: color.function_color
       }
     },
     {
       name: "Methods",
       scope: [
         "entity.name.function.definition",
+        "entity.name.function.java",
         "markup.bold"
       ],
       settings: {
@@ -202,7 +222,9 @@
     {
       name: "Function argument",
       scope: [
-        "variable.parameter"
+        "variable.parameter",
+        "entity.other.attribute-name"
+
       ],
       settings: {
         foreground: color.orange
@@ -216,17 +238,19 @@
         "entity.name.function.definition.special.constructor"
       ],
       settings: {
-        foreground: color.green
+        foreground: color.class_color
       }
     },
     {
       name: "Member variables",
       scope: [
         "variable.other.property.cpp",
-        "variable.other.object.access.cpp"
+        "variable.other.object.access.cpp",
+        "variable.other.object.property",
+        "meta.attribute"
       ],
       settings: {
-        foreground: color.bright_green
+        foreground: color.member_color
       }
     },
     {
@@ -266,7 +290,7 @@
         "variable"
       ],
       settings: {
-        foreground: color.bright_white
+        foreground: color.variables_color
       }
     },
     {
@@ -286,6 +310,16 @@
       ],
       settings: {
         foreground: color.magenta
+      }
+    },
+    {
+      name: "Constants",
+      scope: [
+        "constant.language",
+        "variable.language.this.java"
+      ],
+      settings: {
+        foreground: color.bright_red
       }
     },
     {

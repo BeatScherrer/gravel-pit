@@ -1,30 +1,11 @@
 {
    "colors": {
       "activityBarBadge.background": "#007acc",
-      "editor.background": "#ff0000",
-      "editor.foreground": "#eeffff",
-      "sideBarTitle.foreground": "#bbbbbb",
-      "terminal.ansiBlack": "#000000",
-      "terminal.ansiBlue": "#6699cc",
-      "terminal.ansiBrightBlack": "#4e4e4e",
-      "terminal.ansiBrightBlue": "",
-      "terminal.ansiBrightCyan": "#56fff1",
-      "terminal.ansiBrightGreen": "#85f8a2",
-      "terminal.ansiBrightMagenta": "",
-      "terminal.ansiBrightRed": "",
-      "terminal.ansiBrightWhite": "#eeffff",
-      "terminal.ansiBrightYellow": "#ffeac3",
-      "terminal.ansiCyan": "#56fff1",
-      "terminal.ansiGreen": "#589c69",
-      "terminal.ansiMagenta": "#d477ff",
-      "terminal.ansiRed": "#ff5e5e",
-      "terminal.ansiWhite": "#bbbbbb",
-      "terminal.ansiYellow": "#ffeac3",
-      "terminal.background": "#252525",
-      "terminal.foreground": "#bbbbbb",
-      "terminal.selectionBackground": "#ff0000"
+      "editor.background": "#DDDDDD",
+      "editor.foreground": "#4e4e4e",
+      "sideBarTitle.foreground": "#bbbbbb"
    },
-   "name": "gravel-pit",
+   "name": "gravel-pit-light",
    "tokenColors": [
       {
          "name": "Comment",
@@ -54,19 +35,13 @@
             "punctuation.definition.parameters",
             "punctuation.definition.dictionary",
             "punctuation.separator.dot-access",
-            "punctuation.separator.pointer-access"
+            "punctuation.separator.pointer-access",
+            "punctuation.definition.tag",
+            "punctuation.definition.variable.powershell",
+            "punctuation.terminator"
          ],
          "settings": {
-            "foreground": "#ffeac3"
-         }
-      },
-      {
-         "name": "Terminator statement",
-         "scope": [
-            "punctuation.terminator.statement"
-         ],
-         "settings": {
-            "foreground": "#bbbbbb"
+            "foreground": "#beaf91"
          }
       },
       {
@@ -75,7 +50,7 @@
             "keyword.operator"
          ],
          "settings": {
-            "foreground": "#ffeac3"
+            "foreground": "#ff5e5e"
          }
       },
       {
@@ -83,10 +58,11 @@
          "scope": [
             "storage.type",
             "support.type.property-name.json.comments",
+            "meta.structure.dictionary.json",
             "markup.heading"
          ],
          "settings": {
-            "foreground": "#ffeac3"
+            "foreground": "#ff5e5e"
          }
       },
       {
@@ -96,7 +72,7 @@
             "storage.type.modifier"
          ],
          "settings": {
-            "foreground": "#ffeac3"
+            "foreground": "#beaf91"
          }
       },
       {
@@ -107,7 +83,9 @@
             "keyword.control.directive.define",
             "keyword.control.directive.include",
             "keyword.other.using.directive.cpp",
-            "markup.list.unnumbered"
+            "keyword.other.package.java",
+            "markup.list.unnumbered",
+            "entity.name.tag"
          ],
          "settings": {
             "foreground": "#ff5e5e"
@@ -121,7 +99,7 @@
          ],
          "settings": {
             "fontStyle": "bold",
-            "foreground": "#ffeac3"
+            "foreground": "#beaf91"
          }
       },
       {
@@ -137,8 +115,11 @@
       {
          "name": "Function Call",
          "scope": [
+            "support.function.powershell",
             "entity.name.function.call",
             "entity.name.function.member",
+            "support.function.builtin",
+            "meta.function-call",
             "markup.italic"
          ],
          "settings": {
@@ -149,6 +130,7 @@
          "name": "Methods",
          "scope": [
             "entity.name.function.definition",
+            "entity.name.function.java",
             "markup.bold"
          ],
          "settings": {
@@ -158,7 +140,8 @@
       {
          "name": "Function argument",
          "scope": [
-            "variable.parameter"
+            "variable.parameter",
+            "entity.other.attribute-name"
          ],
          "settings": {
             "foreground": "#ff9035"
@@ -179,7 +162,9 @@
          "name": "Member variables",
          "scope": [
             "variable.other.property.cpp",
-            "variable.other.object.access.cpp"
+            "variable.other.object.access.cpp",
+            "variable.other.object.property",
+            "meta.attribute"
          ],
          "settings": {
             "foreground": "#85f8a2"
@@ -192,7 +177,7 @@
             "storage.modifier.specifier.functional"
          ],
          "settings": {
-            "foreground": "#ffeac3"
+            "foreground": "#beaf91"
          }
       },
       {
@@ -213,7 +198,7 @@
             "punctuation.separator.namespace.access"
          ],
          "settings": {
-            "foreground": "#ffeac3"
+            "foreground": "#beaf91"
          }
       },
       {
@@ -222,7 +207,7 @@
             "variable"
          ],
          "settings": {
-            "foreground": "#eeffff"
+            "foreground": "#000000"
          }
       },
       {
@@ -245,6 +230,16 @@
          }
       },
       {
+         "name": "Constants",
+         "scope": [
+            "constant.language",
+            "variable.language.this.java"
+         ],
+         "settings": {
+            "foreground": "#aa5e5e"
+         }
+      },
+      {
          "name": "test",
          "scope": [ ],
          "settings": {
@@ -252,5 +247,5 @@
          }
       }
    ],
-   "type": "dark"
+   "type": "light"
 }

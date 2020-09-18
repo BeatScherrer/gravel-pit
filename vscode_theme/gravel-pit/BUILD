@@ -6,7 +6,13 @@
 load("@io_bazel_rules_jsonnet//jsonnet:jsonnet.bzl", "jsonnet_to_json")
 
 jsonnet_to_json(
-  name = "gravel-pit",
-  src = "gravel-pit-color-theme.jsonnet",
-  outs = ["gravel-pit-color-theme.json"]
+  name = "gravel-pit-dark",
+  src = "gravel-pit-color-theme-dark.jsonnet",
+  outs = ["gravel-pit-color-theme-dark.json"]
+)
+
+jsonnet_to_json(
+  name = "gravel-pit-light",
+  src = "gravel-pit-color-theme-light.jsonnet",
+  outs = ["gravel-pit-color-theme-light.json"]
 )

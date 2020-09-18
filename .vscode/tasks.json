@@ -6,7 +6,7 @@
     {
       "label": "build theme",
       "type": "shell",
-      "command": "bazel build //gravel-pit:gravel-pit && cp ${workspaceFolder}/vscode_theme/bazel-bin/gravel-pit/*.json ${workspaceFolder}/vscode_theme/themes",
+      "command": "bazel build //gravel-pit:all --strategy=CppCompile=standalone && cp ${workspaceFolder}/vscode_theme/bazel-bin/gravel-pit/*.json ${workspaceFolder}/vscode_theme/themes",
       "problemMatcher": [],
       "options": {
         "cwd": "vscode_theme"
@@ -17,9 +17,9 @@
       }
     },
     {
-      "label": "publish theme"
+      "label": "publish theme",
       "type": "shell",
-      "command": "vsce publish",
+      "command": "vsce publish minor",
       "problemMatcher": [],
       "options": {
         "cwd": "vscode_theme"

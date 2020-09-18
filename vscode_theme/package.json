@@ -2,7 +2,7 @@
     "name": "gravel-pit",
     "displayName": "Gravel Pit",
     "description": "",
-    "version": "0.14.0",
+    "version": "0.23.0",
     "engines": {
         "vscode": "^1.36.1"
     },
@@ -12,9 +12,14 @@
     "contributes": {
         "themes": [
             {
-                "label": "gravel-pit",
+                "label": "gravel-pit-dark",
                 "uiTheme": "vs-dark",
-                "path": "./themes/gravel-pit-color-theme.json"
+                "path": "./themes/gravel-pit-color-theme-dark.json"
+            },
+            {
+                "label": "gravel-pit-light",
+                "uiTheme": "vs",
+                "path": "./themes/gravel-pit-color-theme-light.json"
             }
         ]
     },
