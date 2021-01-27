@@ -2,8 +2,27 @@
    "colors": {
       "activityBarBadge.background": "#007acc",
       "editor.background": "#252525",
-      "editor.foreground": "#eeffff",
-      "sideBarTitle.foreground": "#bbbbbb"
+      "editor.foreground": "#c5c8c6",
+      "sideBarTitle.foreground": "#707880",
+      "terminal.ansiBlack": "#282a2e",
+      "terminal.ansiBlue": "#5f819d",
+      "terminal.ansiBrightBlack": "#373b41",
+      "terminal.ansiBrightBlue": "#81a2be",
+      "terminal.ansiBrightCyan": "#8abeb7",
+      "terminal.ansiBrightGreen": "#b5bd68",
+      "terminal.ansiBrightMagenta": "#b294bb",
+      "terminal.ansiBrightRed": "#c5c8c6",
+      "terminal.ansiBrightWhite": "#c5c8c6",
+      "terminal.ansiBrightYellow": "#f0c674",
+      "terminal.ansiCyan": "#5e8d87",
+      "terminal.ansiGreen": "#8c9440",
+      "terminal.ansiMagenta": "#85678f",
+      "terminal.ansiRed": "#a54242",
+      "terminal.ansiWhite": "#707880",
+      "terminal.ansiYellow": "#de935f",
+      "terminal.background": "#252525",
+      "terminal.foreground": "#707880",
+      "terminal.selectionBackground": "#ff0000"
    },
    "name": "gravel-pit",
    "tokenColors": [
@@ -25,7 +44,17 @@
             "entity.name.section.latex"
          ],
          "settings": {
-            "foreground": "#56fff1"
+            "foreground": "#5e8d87"
+         }
+      },
+      {
+         "name": "Source",
+         "scope": [
+            "source",
+            "text.xml"
+         ],
+         "settings": {
+            "foreground": "#ffeac3"
          }
       },
       {
@@ -50,7 +79,7 @@
             "punctuation.terminator"
          ],
          "settings": {
-            "foreground": "#bbbbbb"
+            "foreground": "#707880"
          }
       },
       {
@@ -67,7 +96,6 @@
          "scope": [
             "storage.type",
             "support.type.property-name.json.comments",
-            "meta.structure.dictionary.json",
             "markup.heading"
          ],
          "settings": {
@@ -93,22 +121,12 @@
             "keyword.control.directive.include",
             "keyword.other.using.directive.cpp",
             "keyword.other.package.java",
+            "keyword.other.import",
             "markup.list.unnumbered",
             "entity.name.tag"
          ],
          "settings": {
-            "foreground": "#ff5e5e"
-         }
-      },
-      {
-         "name": "test",
-         "scope": [
-            "entity.name.function.preprocessor",
-            "meta.preprocessor.macro"
-         ],
-         "settings": {
-            "fontStyle": "bold",
-            "foreground": "#ffeac3"
+            "foreground": "#a54242"
          }
       },
       {
@@ -118,7 +136,7 @@
             "string.quoted.double.include"
          ],
          "settings": {
-            "foreground": "#56fff1"
+            "foreground": "#5e8d87"
          }
       },
       {
@@ -126,6 +144,7 @@
          "scope": [
             "entity.name.function.call",
             "entity.name.function.member",
+            "entity.name.function",
             "support.function.builtin",
             "support.function.powershell",
             "support.function.be",
@@ -134,10 +153,11 @@
             "support.function.emph.latex",
             "support.function.general.tex",
             "meta.function-call",
-            "markup.italic"
+            "markup.italic",
+            "keyword.cmake"
          ],
          "settings": {
-            "foreground": "#6699cc"
+            "foreground": "#5f819d"
          }
       },
       {
@@ -148,7 +168,7 @@
             "markup.bold"
          ],
          "settings": {
-            "foreground": "#589c69"
+            "foreground": "#8c9440"
          }
       },
       {
@@ -166,10 +186,11 @@
          "scope": [
             "entity.name.type.class",
             "entity.name.type.struct",
-            "entity.name.function.definition.special.constructor"
+            "entity.name.function.definition.special.constructor",
+            "support.class"
          ],
          "settings": {
-            "foreground": "#589c69"
+            "foreground": "#8c9440"
          }
       },
       {
@@ -183,7 +204,7 @@
             "meta.math.block"
          ],
          "settings": {
-            "foreground": "#85f8a2"
+            "foreground": "#b5bd68"
          }
       },
       {
@@ -203,7 +224,7 @@
          ],
          "settings": {
             "fontStyle": "italic",
-            "foreground": "#85f8a2"
+            "foreground": "#b5bd68"
          }
       },
       {
@@ -223,7 +244,7 @@
             "variable"
          ],
          "settings": {
-            "foreground": "#eeffff"
+            "foreground": "#c5c8c6"
          }
       },
       {
@@ -235,7 +256,7 @@
             "keyword.other.item.latex"
          ],
          "settings": {
-            "foreground": "#ff5e5e"
+            "foreground": "#a54242"
          }
       },
       {
@@ -244,7 +265,7 @@
             "storage.type.template"
          ],
          "settings": {
-            "foreground": "#d477ff"
+            "foreground": "#85678f"
          }
       },
       {
@@ -254,14 +275,17 @@
             "variable.language.this.java"
          ],
          "settings": {
-            "foreground": "#aa5e5e"
+            "foreground": "#c5c8c6"
          }
       },
       {
-         "name": "test",
-         "scope": [ ],
+         "name": "Test",
+         "scope": [
+            "support.type.property-name",
+            "support.type.property-name.json.comments"
+         ],
          "settings": {
-            "foreground": "#ff5e5e"
+            "foreground": "#a54242"
          }
       }
    ],
