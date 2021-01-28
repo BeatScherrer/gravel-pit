@@ -122,8 +122,8 @@ EOF
 )
 
   echo $string
-  sed -i "/foreground:\s\".*\"/,/bright_cyan:\s\".*\"/d" ${jsonnet_file} 
-  sed -i "/local\scolor\s=/a ${string}" ${jsonnet_file}
+  sed -e "/foreground:\s\".*\"/,/bright_cyan:\s\".*\"/d" ${jsonnet_file} 
+  # sed -e "/local\scolor\s=/a ${string}" ${jsonnet_file}
 }
 
 
