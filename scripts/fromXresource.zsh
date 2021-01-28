@@ -5,6 +5,8 @@
 function main() {
   verbose=1
   xresources_file="$HOME/.Xresources"
+
+  theme_file=$1
   
   while getopts "hfv" opt; do
     case "$opt" in
@@ -71,13 +73,12 @@ function main() {
   # done extracting colors
   echo "... colors extracted!"
 
-  replaceInJsonnet
-
-  # replacing color in vscode theme
+  # replace the colors in the theme file
+  replaceInJsonnet $theme_file
 }
 
 function showHelp() {
-  echo "Usage: $0 [-v|f|h] -- theme_filename"
+  echo "Usage: $0 [-v|f|h] -- theme_file"
 }
 
 
@@ -91,9 +92,15 @@ function getColorFromXresources() {
 }
 
 function replaceInJsonnet() {
+  local theme_file=$1
+
+  if [[ -z $theme_file ]];then
+    echo "error: pass theme file name (.jsonnet) to $0"
+    exit 1
+  fi
+
   # jsonnet_file="../vscode_theme/gravel-pit/gravel-pit-color-theme-dark.jsonnet"
-  jsonnet_file="theme.jsonnet"
-  echo "replacing in jsonnet file ${jsonnet_file}"
+  echo "replacing in jsonnet file ${theme_file}"
 
   # insert color block
   string=$(cat << EOF
@@ -120,16 +127,14 @@ function replaceInJsonnet() {
 EOF
 )
 
- echo $string
-  
   # delete from foreground to bright_cyan
-  sed -i '/foreground:\s*".*"/,/bright_cyan:\s*".*"/d' ${jsonnet_file} 
+  sed -i '/foreground:\s*".*"/,/bright_cyan:\s*".*"/d' ${theme_file} 
 
   # insert the color block 
-  sed -i "\|special colors|a ${string}" ${jsonnet_file}
+  sed -i "\|special colors|a ${string}" ${theme_file}
 }
 
-
-
-# run main and pass all arguments
+# --------
+# run main
+# --------
 main "$@"

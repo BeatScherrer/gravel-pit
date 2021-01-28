@@ -1,60 +1,63 @@
   // colors to be used
-  local color = {
+local color = {
     // special colors
-    foreground: "a",
-    background: "a",
-    cursor_color: "a",
+  foreground:      "#c5c8c6",
+  background:      "#1d1f21",
+  cursor_color:    "#c5c8c6",
 
     // terminal colors
-    black:           "#282a2e",
-    bright_black:    "#373b41",
-    white:           "#707880",
-    bright_white:    "#c5c8c6",
-    red:             "#a54242",
-    bright_red:      "#c5c8c6",
-    green:           "#8c9440",
-    bright_green:    "#b5bd68",
-    blue:            "#5f819d",
-    bright_blue:     "#81a2be",
-    yellow:          "#de935f",
-    bright_yellow:   "#f0c674",
-    magenta:         "#85678f",
-    bright_magenta:  "#b294bb",
-    cyan:            "#5e8d87",
-    bright_cyan:     "#8abeb7",
+  black:           "#282a2e",
+  bright_black:    "#555b65",
+  white:           "#707880",
+  bright_white:    "#c5c8c6",
+  red:             "#a54242",
+  bright_red:      "#c5c8c6",
+  green:           "#8c9440",
+  bright_green:    "#b5bd68",
+  blue:            "#5f819d",
+  bright_blue:     "#81a2be",
+  yellow:          "#de935f",
+  bright_yellow:   "#ffeac3",
+  magenta:         "#85678f",
+  bright_magenta:  "#b294bb",
+  cyan:            "#5e8d87",
+  bright_cyan:     "#8abeb7",
 
-    /*
-    To adjust a color theme just assign the following colors. The above colors are mainly used to set the terminal colors and to retrieve the Xresources colors for a consistent theme on your system.
-    */
-    // Theme colors:
-    color1:  "", // comment
-    color2:  "", // String
-    color3:  "", // Source
-    color4:  "", // Punctuation
-    color5:  "", // operators
-    color6:  "", // keywords
-    color7:  "", // preprocessor
-    color8:  "", // function call
-    color9:  "", // methods
-    color10: "", // function arguments
-    color11: "", // class and structs
-    color12: "", // member variables
-    color13: "", // namespace
-    color14: "", // control keywords
-    color15: "", // template
-    color16: "", // constants
-  };
+  /*
+  To adjust a color theme just assign the following colors. The above colors are mainly used to set the terminal colors and to retrieve the Xresources colors for a consistent theme on your system.
+  TODO
+  */
+  // Theme colors:
+  color1:  "", // comment
+  color2:  "", // String
+  color3:  "", // Source
+  color4:  "", // Punctuation
+  color5:  "", // operators
+  color6:  "", // keywords
+  color7:  "", // preprocessor
+  color8:  "", // function call
+  color9:  "", // methods
+  color10: "", // function arguments
+  color11: "", // class and structs
+  color12: "", // member variables
+  color13: "", // namespace
+  color14: "", // control keywords
+  color15: "", // template
+  color16: "", // constants
+};
 
 {
   // Settings
   name: "gravel-pit",
   type: "dark",
   colors: {
+    // General
     "editor.background": color.background,
     "editor.foreground": color.foreground,
     "activityBarBadge.background": "#007acc",
     "sideBarTitle.foreground": color.foreground,
-    // terminal colors
+
+    // terminal
     "terminal.background": color.background,
     "terminal.foreground": color.foreground,
     "terminal.selectionBackground": "#ff0000",
@@ -74,20 +77,24 @@
     "terminal.ansiBrightYellow": color.bright_yellow,
     "terminal.ansiCyan": color.cyan,
     "terminal.ansiBrightCyan": color.bright_cyan,
-    // "gitDecoration.addedResourceForeground": color.green,
-    // "gitDecoration.conflictingResourceForeground": color.magenta,
-    // "gitDecoration.deletedResourceForeground": color.red,
-    // "gitDecoration.ignoredResourceForeground": color.gray,
-    // "gitDecoration.modifiedResourceForeground": color.orange,
+
+    // git
+    "gitDecoration.addedResourceForeground": color.green,
+    "gitDecoration.conflictingResourceForeground": color.magenta,
+    "gitDecoration.deletedResourceForeground": color.red,
+    "gitDecoration.ignoredResourceForeground": color.white,
+    "gitDecoration.modifiedResourceForeground": color.bright_yellow,
     // "gitDecoration.submoduleResourceForeground": "#ff0000",
     // "gitDecoration.untrackedResourceForeground": color.gray,
-    // "minimap.errorHighlight": color.red,
-    // "minimap.findMatchHighlight": color.yellow,
-    // "minimap.selectionHighlight": color.cyan,
-    // "minimap.warningHighlight": color.orange,
-    // "minimapGutter.addedBackground": color.green,
-    // "minimapGutter.deletedBackground": color.red,
-    // "minimapGutter.modifiedBackground": color.yellow,
+
+    // minimap
+    "minimap.errorHighlight": color.red,
+    "minimap.findMatchHighlight": color.bright_blue,
+    "minimap.selectionHighlight": color.cyan,
+    "minimap.warningHighlight": color.yellow,
+    "minimapGutter.addedBackground": color.green,
+    "minimapGutter.deletedBackground": color.red,
+    "minimapGutter.modifiedBackground": color.yellow,
   },
   tokenColors: [
     {
@@ -316,9 +323,9 @@
       name: "Control Keywords",
       scope: [
         "keyword.control",
-        "keyword.other.array.begin",
         "constant.language.NULL",
         "keyword.other.item.latex",
+        "keyword.other.array.begin",
       ],
       settings: {
         foreground: color.bright_red

@@ -1,27 +1,39 @@
 {
    "colors": {
       "activityBarBadge.background": "#007acc",
-      "editor.background": "",
-      "editor.foreground": "",
-      "sideBarTitle.foreground": "",
+      "editor.background": "#1d1f21",
+      "editor.foreground": "#c5c8c6",
+      "gitDecoration.addedResourceForeground": "#8c9440",
+      "gitDecoration.conflictingResourceForeground": "#85678f",
+      "gitDecoration.deletedResourceForeground": "#a54242",
+      "gitDecoration.ignoredResourceForeground": "#707880",
+      "gitDecoration.modifiedResourceForeground": "#ffeac3",
+      "minimap.errorHighlight": "#a54242",
+      "minimap.findMatchHighlight": "#81a2be",
+      "minimap.selectionHighlight": "#5e8d87",
+      "minimap.warningHighlight": "#de935f",
+      "minimapGutter.addedBackground": "#8c9440",
+      "minimapGutter.deletedBackground": "#a54242",
+      "minimapGutter.modifiedBackground": "#de935f",
+      "sideBarTitle.foreground": "#c5c8c6",
       "terminal.ansiBlack": "#282a2e",
       "terminal.ansiBlue": "#5f819d",
-      "terminal.ansiBrightBlack": "#373b41",
+      "terminal.ansiBrightBlack": "#555b65",
       "terminal.ansiBrightBlue": "#81a2be",
       "terminal.ansiBrightCyan": "#8abeb7",
       "terminal.ansiBrightGreen": "#b5bd68",
       "terminal.ansiBrightMagenta": "#b294bb",
       "terminal.ansiBrightRed": "#c5c8c6",
       "terminal.ansiBrightWhite": "#c5c8c6",
-      "terminal.ansiBrightYellow": "#f0c674",
+      "terminal.ansiBrightYellow": "#ffeac3",
       "terminal.ansiCyan": "#5e8d87",
       "terminal.ansiGreen": "#8c9440",
       "terminal.ansiMagenta": "#85678f",
       "terminal.ansiRed": "#a54242",
       "terminal.ansiWhite": "#707880",
       "terminal.ansiYellow": "#de935f",
-      "terminal.background": "",
-      "terminal.foreground": "",
+      "terminal.background": "#1d1f21",
+      "terminal.foreground": "#c5c8c6",
       "terminal.selectionBackground": "#ff0000"
    },
    "name": "gravel-pit",
@@ -34,7 +46,7 @@
          ],
          "settings": {
             "fontStyle": "italic",
-            "foreground": "#373b41"
+            "foreground": "#555b65"
          }
       },
       {
@@ -54,7 +66,7 @@
             "text.xml"
          ],
          "settings": {
-            "foreground": "#f0c674"
+            "foreground": "#ffeac3"
          }
       },
       {
@@ -70,7 +82,7 @@
             "punctuation.definition.variable"
          ],
          "settings": {
-            "foreground": "#f0c674"
+            "foreground": "#ffeac3"
          }
       },
       {
@@ -79,7 +91,7 @@
             "punctuation.terminator"
          ],
          "settings": {
-            "foreground": ""
+            "foreground": "#c5c8c6"
          }
       },
       {
@@ -88,7 +100,7 @@
             "keyword.operator"
          ],
          "settings": {
-            "foreground": "#f0c674"
+            "foreground": "#ffeac3"
          }
       },
       {
@@ -99,7 +111,7 @@
             "markup.heading"
          ],
          "settings": {
-            "foreground": "#f0c674"
+            "foreground": "#ffeac3"
          }
       },
       {
@@ -109,7 +121,7 @@
             "storage.type.modifier"
          ],
          "settings": {
-            "foreground": "#f0c674"
+            "foreground": "#ffeac3"
          }
       },
       {
@@ -214,7 +226,7 @@
             "storage.modifier.specifier.functional"
          ],
          "settings": {
-            "foreground": "#f0c674"
+            "foreground": "#ffeac3"
          }
       },
       {
@@ -235,7 +247,7 @@
             "punctuation.separator.namespace.access"
          ],
          "settings": {
-            "foreground": "#f0c674"
+            "foreground": "#ffeac3"
          }
       },
       {
@@ -251,6 +263,7 @@
          "name": "Control Keywords",
          "scope": [
             "keyword.control",
+            "keyword.control.powershell",
             "keyword.other.array.begin",
             "constant.language.NULL",
             "keyword.other.item.latex"
