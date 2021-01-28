@@ -34,6 +34,7 @@ function main() {
   # get all colors
   foreground=$(getColorFromXresources foreground)
   background=$(getColorFromXresources background)
+  cursor_color=$(getColorFromXresources cursorColor)
 
   # black
   color0=$(getColorFromXresources color0)
@@ -94,29 +95,34 @@ function replaceInJsonnet() {
   jsonnet_file="../vscode_theme/gravel-pit/gravel-pit-color-theme-dark.jsonnet"
 
   # insert color block
-  string="\
-    black:           \"${color0}\",\n\
-    bright_black:    \"${color8}\",\n\
-    white:           \"${color7}\",\n\
-    bright_white:    \"${color15}\",\n\
-    red:             \"${color1}\",\n\
-    bright_red:      \"${color15}\",\n\
-    green:           \"${color2}\",\n\
-    bright_green:    \"${color10}\",\n\
-    blue:            \"${color4}\",\n\
-    bright_blue:     \"${color12}\",\n\
-    yellow:          \"${color3}\",\n\
-    bright_yellow:   \"${color11}\",\n\
-    magenta:         \"${color5}\",\n\
-    bright_magenta:  \"${color13}\",\n\
-    cyan:            \"${color6}\",\n\
-    bright_cyan:     \"${color14}\","
-          
+  string=$(cat << EOF
+    // special colors
+    foreground:      "${foreground}",
+    background:      "${background}",
+    cursor_color:    "${cursor_color}",
 
-  beat="hello"
-  
-  # sed -e "/black:\s\".*\"/,/bright_cyan:\s\".*\"/{s/.*//}" theme.jsonnet | head -n 30
-  sed -i "/black:\s\".*\"/,/bright_cyan:\s\".*\"/d" ${jsonnet_file} 
+    // terminal colors
+    black:           "${color0}",
+    bright_black:    "${color8}",
+    white:           "${color7}",
+    bright_white:    "${color15}",
+    red:             "${color1}",
+    bright_red:      "${color15}",
+    green:           "${color2}",
+    bright_green:    "${color10}",
+    blue:            "${color4}",
+    bright_blue:     "${color12}",
+    yellow:          "${color3}",
+    bright_yellow:   "${color11}",
+    magenta:         "${color5}",
+    bright_magenta:  "${color13}",
+    cyan:            "${color6}",
+    bright_cyan:     "${color14}",
+EOF
+)
+
+  echo $string
+  sed -i "/foreground:\s\".*\"/,/bright_cyan:\s\".*\"/d" ${jsonnet_file} 
   sed -i "/local\scolor\s=/a ${string}" ${jsonnet_file}
 }
 

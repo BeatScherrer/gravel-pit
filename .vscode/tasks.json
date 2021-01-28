@@ -6,7 +6,7 @@
     {
       "label": "build theme",
       "type": "shell",
-      "command": "rm -f ${workspaceFolder}/vscode_theme/themes/* && bazel build //gravel-pit:all --strategy=CppCompile=standalone && cp ${workspaceFolder}/vscode_theme/bazel-bin/gravel-pit/*.json ${workspaceFolder}/vscode_theme/themes",
+      "command": "setopt +o nomatch && rm -f ${workspaceFolder}/vscode_theme/themes/* 2> /dev/null && bazel build //gravel-pit:all --strategy=CppCompile=standalone && cp ${workspaceFolder}/vscode_theme/bazel-bin/gravel-pit/*.json ${workspaceFolder}/vscode_theme/themes",
       "problemMatcher": [],
       "options": {
         "cwd": "vscode_theme"
