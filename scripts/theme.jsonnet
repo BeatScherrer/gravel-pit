@@ -1,45 +1,47 @@
   // colors to be used
   local color = {
-black:           "#282a2e",
-    bright_black:    "#373b41",
-    white:           "#707880",
-    bright_white:    "#c5c8c6",
-    red:             "#a54242",
-    bright_red:      "#c5c8c6",
-    green:           "#8c9440",
-    bright_green:    "#b5bd68",
-    blue:            "#5f819d",
-    bright_blue:     "#81a2be",
-    yellow:          "#de935f",
-    bright_yellow:   "#f0c674",
-    magenta:         "#85678f",
-    bright_magenta:  "#b294bb",
-    cyan:            "#5e8d87",
-    bright_cyan:     "#8abeb7",
-    black:           "#282a2e",
-    bright_black:    "#373b41",
-    white:           "#707880",
-    bright_white:    "#c5c8c6",
-    red:             "#a54242",
-    bright_red:      "#c5c8c6",
-    green:           "#8c9440",
-    bright_green:    "#b5bd68",
-    blue:            "#5f819d",
-    bright_blue:     "#81a2be",
-    yellow:          "#de935f",
-    bright_yellow:   "#f0c674",
-    magenta:         "#85678f",
-    bright_magenta:  "#b294bb",
-    cyan:            "#5e8d87",
-    bright_cyan:     "#8abeb7",
-
+    // special colors
+    foreground:      "#c5c8c6",
+    background:      "#1d1f21",
+    cursor_color:    "#c5c8c6",
     // terminal colors
+    black:           "#282a2e",
+    bright_black:    "#555b65",
+    white:           "#707880",
+    bright_white:    "#c5c8c6",
+    red:             "#a54242",
+    bright_red:      "#c5c8c6",
+    green:           "#8c9440",
+    bright_green:    "#b5bd68",
+    blue:            "#5f819d",
+    bright_blue:     "#81a2be",
+    yellow:          "#de935f",
+    bright_yellow:   "#ffeac3",
+    magenta:         "#85678f",
+    bright_magenta:  "#b294bb",
+    cyan:            "#5e8d87",
+    bright_cyan:     "#8abeb7",
 
-    // theme colors
-    gray: "#8a8a8a",
-    dark_gray: "#252525",
-    orange: "#ff9035",
-    sand: "#ffeac3"
+    /*
+    To adjust a color theme just assign the following colors. The above colors are mainly used to set the terminal colors and to retrieve the Xresources colors for a consistent theme on your system.
+    */
+    // Theme colors:
+    color1:  "", // comment
+    color2:  "", // String
+    color3:  "", // Source
+    color4:  "", // Punctuation
+    color5:  "", // operators
+    color6:  "", // keywords
+    color7:  "", // preprocessor
+    color8:  "", // function call
+    color9:  "", // methods
+    color10: "", // function arguments
+    color11: "", // class and structs
+    color12: "", // member variables
+    color13: "", // namespace
+    color14: "", // control keywords
+    color15: "", // template
+    color16: "", // constants
   };
 
 {
@@ -47,13 +49,13 @@ black:           "#282a2e",
   name: "gravel-pit",
   type: "dark",
   colors: {
-    "editor.background": color.bright_black,
-    "editor.foreground": color.bright_white,
+    "editor.background": color.background,
+    "editor.foreground": color.foreground,
     "activityBarBadge.background": "#007acc",
-    "sideBarTitle.foreground": color.white,
+    "sideBarTitle.foreground": color.foreground,
     // terminal colors
-    "terminal.background": color.dark_gray,
-    "terminal.foreground": color.white,
+    "terminal.background": color.background,
+    "terminal.foreground": color.foreground,
     "terminal.selectionBackground": "#ff0000",
     "terminal.ansiBlack": color.black,
     "terminal.ansiBrightBlack": color.bright_black,
@@ -95,7 +97,7 @@ black:           "#282a2e",
       ],
       settings: {
         fontStyle: "italic",
-        foreground: color.gray
+        foreground: color.bright_black
       }
     },
     {
@@ -105,7 +107,7 @@ black:           "#282a2e",
         "entity.name.section.latex"
       ],
       settings: {
-        foreground: color.cyan
+        foreground: color.bright_cyan
       }
     },
     {
@@ -115,7 +117,7 @@ black:           "#282a2e",
         "text.xml"
       ],
       settings: {
-        foreground: color.sand
+        foreground: color.bright_yellow
       }
     },
     {
@@ -131,7 +133,7 @@ black:           "#282a2e",
         "punctuation.definition.variable",
       ],
       settings: {
-        foreground: color.sand
+        foreground: color.bright_yellow
       }
     },
     {
@@ -140,7 +142,7 @@ black:           "#282a2e",
         "punctuation.terminator"
       ],
       settings: {
-        foreground: color.white
+        foreground: color.foreground
       }
     },
     {
@@ -149,7 +151,7 @@ black:           "#282a2e",
         "keyword.operator",
       ],
       settings: {
-        foreground: color.sand
+        foreground: color.bright_yellow
       }
     },
     {
@@ -160,7 +162,7 @@ black:           "#282a2e",
         "markup.heading"
       ],
       settings: {
-        foreground: color.sand
+        foreground: color.bright_yellow
       }
     },
     {
@@ -170,7 +172,7 @@ black:           "#282a2e",
         "storage.type.modifier"
       ],
       settings: {
-        foreground: color.sand
+        foreground: color.bright_yellow
       }
     },
     {
@@ -187,7 +189,7 @@ black:           "#282a2e",
         "entity.name.tag",
       ],
       settings: {
-        foreground: color.red
+        foreground: color.bright_red
       }
     },
     {
@@ -197,7 +199,7 @@ black:           "#282a2e",
         "string.quoted.double.include"
       ],
       settings: {
-        foreground: color.cyan
+        foreground: color.bright_cyan
       }
     },
     {
@@ -218,7 +220,7 @@ black:           "#282a2e",
         "keyword.cmake"
       ],
       settings: {
-        foreground: color.blue
+        foreground: color.bright_blue
       }
     },
     {
@@ -229,7 +231,7 @@ black:           "#282a2e",
         "markup.bold"
       ],
       settings: {
-        foreground: color.green
+        foreground: color.bright_green
       }
     },
     {
@@ -240,7 +242,7 @@ black:           "#282a2e",
 
       ],
       settings: {
-        foreground: color.orange
+        foreground: color.yellow
       }
     },
     {
@@ -276,7 +278,7 @@ black:           "#282a2e",
         "storage.modifier.specifier.functional"
       ],
       settings: {
-        foreground: color.sand
+        foreground: color.bright_yellow
       }
     },
     {
@@ -297,7 +299,7 @@ black:           "#282a2e",
         "punctuation.separator.namespace.access"
       ],
       settings: {
-        foreground: color.sand
+        foreground: color.bright_yellow
       }
     },
     {
@@ -318,7 +320,7 @@ black:           "#282a2e",
         "keyword.other.item.latex",
       ],
       settings: {
-        foreground: color.red
+        foreground: color.bright_red
       }
     },
     {

@@ -1,9 +1,9 @@
   // colors to be used
   local color = {
     // special colors
-    foreground: "",
-    background: "",
-    cursor_color: "",
+    foreground: "a",
+    background: "a",
+    cursor_color: "a",
 
     // terminal colors
     black:           "#282a2e",
