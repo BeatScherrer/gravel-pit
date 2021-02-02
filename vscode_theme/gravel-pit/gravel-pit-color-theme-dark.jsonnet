@@ -25,8 +25,11 @@ local color = {
 
   /*
   To adjust a color theme just assign the following colors. The above colors are mainly used to set the terminal colors and to retrieve the Xresources colors for a consistent theme on your system.
-  TODO
+
+  Specify the tokens as high level as possible in the general section and.
+  The different languages have their own section due to unique language specific behavior such as different include syntaxes etc. Other than that languages like md, latex etc. cannot be captured with the general token assignment and would dillute the token semantics.
   */
+
   // Theme colors:
   comment_color: color.bright_black,
   string_color: color.bright_cyan,
@@ -67,7 +70,7 @@ local color = {
     // terminal
     "terminal.background": color.background,
     "terminal.foreground": color.foreground,
-    "terminal.selectionBackground": "#ff0000",
+    "terminal.selectionBackground": color.bright_cyan,
     "terminal.ansiBlack": color.black,
     "terminal.ansiBrightBlack": color.bright_black,
     "terminal.ansiBlue": color.blue,

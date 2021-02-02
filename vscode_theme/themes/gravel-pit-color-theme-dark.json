@@ -38,7 +38,7 @@
       "terminal.ansiYellow": "#de935f",
       "terminal.background": "#1d1f21",
       "terminal.foreground": "#c5c8c6",
-      "terminal.selectionBackground": "#ff0000"
+      "terminal.selectionBackground": "#8abeb7"
    },
    "name": "gravel-pit",
    "tokenColors": [
