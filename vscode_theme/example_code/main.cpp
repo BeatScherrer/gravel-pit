@@ -12,6 +12,7 @@ std::string name_;
 
 };
 
+// this is a comment
 int main(int argc, char** argv) {
   Student fabio;
   fabio.getName();

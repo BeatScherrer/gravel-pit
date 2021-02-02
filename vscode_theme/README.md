@@ -1,6 +1,6 @@
 # Gravel Pit Color Theme
 
-![gravel-pit example](image.png)
+![gravel-pit example](https://raw.githubusercontent.com/BeatScherrer/gravel-pit/master/vscode_theme/image.png)
 
 Welcome to my color theme. Since I was unhappy with many color themes for C++ I decided to create my own and publish it.
 The theme is oriented on earthy colors which are light to the eye for the basic entities. highly interesting entities such as objects, variables, methods and function are given a brighter color to immediately differentiate them.

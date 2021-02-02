@@ -5,13 +5,13 @@ local color = {
   background:      "#1d1f21",
   cursor_color:    "#c5c8c6",
 
-    // terminal colors
+  // terminal colors
   black:           "#282a2e",
   bright_black:    "#555b65",
   white:           "#707880",
   bright_white:    "#c5c8c6",
   red:             "#a54242",
-  bright_red:      "#c5c8c6",
+  bright_red:      "#cc6666",
   green:           "#8c9440",
   bright_green:    "#b5bd68",
   blue:            "#5f819d",
@@ -28,22 +28,24 @@ local color = {
   TODO
   */
   // Theme colors:
-  color1:  "", // comment
-  color2:  "", // String
-  color3:  "", // Source
-  color4:  "", // Punctuation
-  color5:  "", // operators
-  color6:  "", // keywords
-  color7:  "", // preprocessor
-  color8:  "", // function call
-  color9:  "", // methods
-  color10: "", // function arguments
-  color11: "", // class and structs
-  color12: "", // member variables
-  color13: "", // namespace
-  color14: "", // control keywords
-  color15: "", // template
-  color16: "", // constants
+  comment_color: color.bright_black,
+  string_color: color.bright_cyan,
+  color_1: color.red,
+  color_2: color.bright_yellow,
+  color_3: color.bright_blue,
+  color_4: "",
+  color_5: "",
+  color_6: "",
+  color_7: "",
+  color_8: "",
+  color_9: "",
+  color_10: "",
+  color_11: "",
+  color_12: "",
+  color_13: "",
+  color_14: "",
+  color_15: "",
+  color_16: "",
 };
 
 {
@@ -52,9 +54,14 @@ local color = {
   type: "dark",
   colors: {
     // General
+    // Editor
     "editor.background": color.background,
     "editor.foreground": color.foreground,
-    "activityBarBadge.background": "#007acc",
+    "editorGroup.border": color.cyan,
+    "editorGroup.dropBackground": color.cyan,
+    "activityBarBadge.background": color.blue,
+    "activityBarBadge.foreground": color.bright_white,
+    "activityBar.background": color.black,
     "sideBarTitle.foreground": color.foreground,
 
     // terminal
@@ -64,93 +71,209 @@ local color = {
     "terminal.ansiBlack": color.black,
     "terminal.ansiBrightBlack": color.bright_black,
     "terminal.ansiBlue": color.blue,
-    "terminal.ansiBrightBlue": color.bright_blue,
+    "terminal.ansiBrightBlue": color.color_3,
     "terminal.ansiGreen": color.green,
     "terminal.ansiBrightGreen": color.bright_green,
     "terminal.ansiMagenta": color.magenta,
     "terminal.ansiBrightMagenta": color.bright_magenta,
-    "terminal.ansiRed": color.red,
+    "terminal.ansiRed": color.color_1,
     "terminal.ansiBrightRed": color.bright_red,
     "terminal.ansiWhite": color.white,
     "terminal.ansiBrightWhite": color.bright_white,
     "terminal.ansiYellow": color.yellow,
-    "terminal.ansiBrightYellow": color.bright_yellow,
+    "terminal.ansiBrightYellow": color.color_2,
     "terminal.ansiCyan": color.cyan,
     "terminal.ansiBrightCyan": color.bright_cyan,
 
     // git
     "gitDecoration.addedResourceForeground": color.green,
     "gitDecoration.conflictingResourceForeground": color.magenta,
-    "gitDecoration.deletedResourceForeground": color.red,
+    "gitDecoration.deletedResourceForeground": color.color_1,
     "gitDecoration.ignoredResourceForeground": color.white,
-    "gitDecoration.modifiedResourceForeground": color.bright_yellow,
+    "gitDecoration.modifiedResourceForeground": color.color_2,
     // "gitDecoration.submoduleResourceForeground": "#ff0000",
     // "gitDecoration.untrackedResourceForeground": color.gray,
 
     // minimap
-    "minimap.errorHighlight": color.red,
-    "minimap.findMatchHighlight": color.bright_blue,
+    "minimap.errorHighlight": color.color_1,
+    "minimap.findMatchHighlight": color.color_3,
     "minimap.selectionHighlight": color.cyan,
     "minimap.warningHighlight": color.yellow,
     "minimapGutter.addedBackground": color.green,
-    "minimapGutter.deletedBackground": color.red,
+    "minimapGutter.deletedBackground": color.color_1,
     "minimapGutter.modifiedBackground": color.yellow,
   },
   tokenColors: [
+    # -------
+    # General
+    # -------
     {
-      name: "Comment",
+      name: "text",
       scope: [
-        "comment",
-        "punctuation.definition.comment"
+        "text"
       ],
       settings: {
-        fontStyle: "italic",
-        foreground: color.bright_black
-      }
+        foreground: color.foreground
+      },
     },
     {
-      name: "String",
+      name: "punctuation",
       scope: [
-        "string",
-        "entity.name.section.latex"
+        "punctuation"
       ],
       settings: {
-        foreground: color.bright_cyan
-      }
+        foreground: color.color_2
+      },
     },
+    {
+      name: "string",
+      scope: [
+        "string"
+      ],
+      settings: {
+        foreground: color.string_color
+      },
+    },
+    {
+      name: "variable",
+      scope: [
+        "variable"
+      ],
+      settings: {
+        foreground: color.foreground
+      },
+    },
+    {
+      name: "comment",
+      scope: [
+        "comment"
+      ],
+      settings: {
+        foreground: color.comment_color
+      },
+    },
+    {
+      name: "function",
+      scope: [
+        "entity.name.function",
+        "support.function"
+      ],
+      settings: {
+        foreground: color.color_3
+      },
+    },
+
+    # --------------
+    # markdown rules
+    # --------------
+    {
+      name: "text",
+      scope: [
+        "meta.paragraph.markdown"
+      ],
+      settings: {
+        foreground: color.foreground
+      },
+    },
+    {
+      name: "Header",
+      scope: [
+        "markup.heading"
+      ],
+      settings: {
+        fontStyle: "bold",
+        foreground: color.color_2
+      },
+    },
+    {
+      name: "code",
+      scope: [
+        "markup.fenced_code",
+        "markup.inline"
+      ],
+      settings: {
+        foreground: color.bright_magenta
+      },
+    }, 
+    {
+      name: "list",
+      scope: [
+        "markup.list",
+        "punctuation.list"
+      ],
+      settings: {
+        foreground: color.bright_green
+      },
+    },
+    {
+      name: "bold",
+      scope: [
+        "markup.bold"
+      ],
+      settings: {
+        foreground: color.bright_red,
+        fontStyle: 'bold'
+      },
+    },
+    {
+      name: "italic",
+      scope: [
+        "markup.italic"
+      ],
+      settings: {
+        foreground: color.bright_green,
+        fontStyle: 'italic'
+      },
+    },
+   {
+      name: "links",
+      scope: [
+        "meta.link"
+      ],
+      settings: {
+        foreground: color.blue
+      },
+    },
+    # ---
+    # XML
+    # ---
+    {
+      name: "text",
+      scope: [
+        "meta.paragraph.markdown"
+      ],
+      settings: {
+        foreground: color.foreground
+      },
+    },
+    {
+      name: "tag",
+      scope: [
+        "entity.name.tag",
+      ],
+      settings: {
+        foreground: color.bright_red
+      },
+    },
+    {
+      name: "attribute",
+      scope: [
+        "entity.other.attribute-name"
+      ],
+      settings: {
+        foreground: color.yellow
+      },
+    },
+    # ---
+    # C++
+    # ---
     {
       name: "Source",
       scope: [
         "source",
-        "text.xml"
       ],
       settings: {
-        foreground: color.bright_yellow
-      }
-    },
-    {
-      name: "Punctuation",
-      scope: [
-        "punctuation.section",
-        "punctuation.terminator.statement",
-        "punctuation.definition.parameters",
-        "punctuation.definition.dictionary",
-        "punctuation.separator.dot-access",
-        "punctuation.separator.pointer-access",
-        "punctuation.definition.tag",
-        "punctuation.definition.variable",
-      ],
-      settings: {
-        foreground: color.bright_yellow
-      }
-    },
-    {
-      name: "Terminator statement",
-      scope: [
-        "punctuation.terminator"
-      ],
-      settings: {
-        foreground: color.foreground
+        foreground: color.color_2
       }
     },
     {
@@ -159,18 +282,16 @@ local color = {
         "keyword.operator",
       ],
       settings: {
-        foreground: color.bright_yellow
+        foreground: color.color_2
       }
     },
     {
       name: "keywords",
       scope: [
         "storage.type",
-        "support.type.property-name.json.comments",
-        "markup.heading"
       ],
       settings: {
-        foreground: color.bright_yellow
+        foreground: color.color_2
       }
     },
     {
@@ -180,7 +301,7 @@ local color = {
         "storage.type.modifier"
       ],
       settings: {
-        foreground: color.bright_yellow
+        foreground: color.color_2
       }
     },
     {
@@ -193,50 +314,27 @@ local color = {
         "keyword.other.using.directive.cpp",
         "keyword.other.package.java",
         "keyword.other.import",
-        "markup.list.unnumbered",
-        "entity.name.tag",
+        "punctuation.definition.directive.cpp",
+        "variable.language.this"
       ],
       settings: {
         foreground: color.bright_red
       }
     },
     {
-      name: "includes",
+      name: "preprocessor arg",
       scope: [
-        "string.quoted.other.lt-gt.include.cpp",
-        "string.quoted.double.include"
+        "punctuation.definition.string"
       ],
       settings: {
-        foreground: color.bright_cyan
-      }
-    },
-    {
-      name: "Function Call",
-      scope: [
-        "entity.name.function.call",
-        "entity.name.function.member",
-        "entity.name.function",
-        "support.function.builtin",
-        "support.function.powershell",
-        "support.function.be",
-        "support.function.section.latex",
-        "support.function.texttt.latex",
-        "support.function.emph.latex",
-        "support.function.general.tex",
-        "meta.function-call",
-        "markup.italic",
-        "keyword.cmake"
-      ],
-      settings: {
-        foreground: color.bright_blue
-      }
+        foreground: color.string_color
+      },
     },
     {
       name: "Methods",
       scope: [
         "entity.name.function.definition",
         "entity.name.function.java",
-        "markup.bold"
       ],
       settings: {
         foreground: color.bright_green
@@ -246,8 +344,6 @@ local color = {
       name: "Function argument",
       scope: [
         "variable.parameter",
-        "entity.other.attribute-name"
-
       ],
       settings: {
         foreground: color.yellow
@@ -266,27 +362,13 @@ local color = {
       }
     },
     {
-      name: "Member variables",
-      scope: [
-        "variable.other.property.cpp",
-        "variable.other.object.access.cpp",
-        "variable.other.object.property",
-        "variable.other.member",
-        "meta.attribute",
-        "meta.math.block"
-      ],
-      settings: {
-        foreground: color.bright_green
-      }
-    },
-    {
       name: "Class Access Modifiers",
       scope: [
         "storage.type.modifier",
         "storage.modifier.specifier.functional"
       ],
       settings: {
-        foreground: color.bright_yellow
+        foreground: color.color_2
       }
     },
     {
@@ -307,16 +389,7 @@ local color = {
         "punctuation.separator.namespace.access"
       ],
       settings: {
-        foreground: color.bright_yellow
-      }
-    },
-    {
-      name: "variables",
-      scope: [
-        "variable"
-      ],
-      settings: {
-        foreground: color.bright_white
+        foreground: color.color_2
       }
     },
     {
@@ -334,10 +407,10 @@ local color = {
     {
       name: "Template",
       scope: [
-        "storage.type.template"
+        "storage.type.template",
       ],
       settings: {
-        foreground: color.magenta
+        foreground: color.bright_magenta
       }
     },
     {
@@ -350,15 +423,5 @@ local color = {
         foreground: color.bright_red
       }
     },
-    {
-      name: "Test",
-      scope: [
-        "support.type.property-name",
-        "support.type.property-name.json.comments",
-      ],
-      settings: {
-        foreground: color.red
-      }
-    }
   ]
 }
