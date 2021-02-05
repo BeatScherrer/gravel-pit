@@ -2,26 +2,36 @@
     "name": "gravel-pit",
     "displayName": "Gravel Pit",
     "description": "",
-    "version": "0.39.0",
+    "version": "0.42.0",
     "engines": {
         "vscode": "^1.36.1"
     },
     "categories": [
         "Themes"
     ],
+    "keywords": [
+        "theme",
+        "color-theme",
+        "gravel"
+    ],
     "contributes": {
         "themes": [
             {
-                "label": "gravel-pit-dark",
+                "label": "gravel-pit",
                 "uiTheme": "vs-dark",
-                "path": "./themes/gravel-pit-color-theme-dark.json"
-            },
-            {
-                "label": "gravel-pit-light",
-                "uiTheme": "vs",
-                "path": "./themes/gravel-pit-color-theme-light.json"
+                "path": "./theme/gravel_pit_dark.json"
             }
         ]
     },
-    "publisher": "BeatScherrer"
+    "publisher": "BeatScherrer",
+    "scripts": {
+        "generate": "node ./scripts/generate.js",
+        "build": "node ./scripts/build.js",
+        "vscode:prepublish": "npm run generate",
+        "vsce-publish": "vsce publish"
+    },
+    "devDependencies": {
+        "js-yaml": "^4.0.0",
+        "vsce": "^1.85.0"
+    }
 }
