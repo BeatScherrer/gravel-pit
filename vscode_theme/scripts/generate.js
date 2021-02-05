@@ -13,14 +13,22 @@ const withAlphaType = new yaml.Type('!alpha', {
 const schema = yaml.DEFAULT_SCHEMA.extend(withAlphaType);
 
 try {
-  const input_yaml = path.join(__dirname, '../src/gravel_pit.yaml');
+  const gravel_input_yaml = path.join(__dirname, '../src/gravel_pit.yaml');
+  const dracula_input_yaml = path.join(__dirname, '../src/dracula_pit.yaml');
 
   // parse yaml file
-  const theme_object = yaml.load(fs.readFileSync(input_yaml), { schema });
+  const gravel_theme_object = yaml.load(fs.readFileSync(gravel_input_yaml), { schema });
+  const dracula_theme_object = yaml.load(fs.readFileSync(dracula_input_yaml), { schema });
 
-  // write yaml file to json
-  const output_json = path.join(__dirname, '../theme/gravel_pit_dark.json');
-  fs.writeFileSync(output_json, JSON.stringify(theme_object, null, 2));
+  // write theme files to json
+
+  // gravel theme
+  const gravel_output_json = path.join(__dirname, '../theme/gravel_pit_dark.json');
+  fs.writeFileSync(gravel_output_json, JSON.stringify(gravel_theme_object, null, 2));
+
+  // dracula theme
+  const dracula_output_json = path.join(__dirname, '../theme/dracula_pit_dark.json');
+  fs.writeFileSync(dracula_output_json, JSON.stringify(dracula_theme_object, null, 2));
 } catch (e) {
   console.log(e);
 }

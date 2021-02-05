@@ -20,6 +20,11 @@
                 "label": "gravel-pit",
                 "uiTheme": "vs-dark",
                 "path": "./theme/gravel_pit_dark.json"
+            },
+            {
+                "label": "dracula-pit",
+                "uiTheme": "vs-dark",
+                "path": "./theme/dracula_pit_dark.json"
             }
         ]
     },
