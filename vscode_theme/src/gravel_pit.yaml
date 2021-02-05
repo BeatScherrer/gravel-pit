@@ -33,8 +33,7 @@ gravelpit:
     - &COLOR7        '#707880' # white
     - &COLOR15       '#c5c8c6' # bright white
   base:
-    # - &BG        '#1d1f21'
-    - &BG        '#ff0000'
+    - &BG        '#1d1f21'
     - &FG        '#c5c8c6'
     - &SELECTION '#44475A'
     - &COMMENT   '#555b65'
