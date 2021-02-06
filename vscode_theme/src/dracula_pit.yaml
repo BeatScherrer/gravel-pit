@@ -75,9 +75,9 @@ colors:
   terminal.ansiBrightCyan: *BRIGHT_CYAN
   terminal.ansiBrightWhite: *BRIGHT_WHITE
   terminal.ansiBlack: *BLACK
-  terminal.ansiRed: *COLOR1
-  terminal.ansiGreen: *COLOR2
-  terminal.ansiYellow: *COLOR3
+  terminal.ansiRed: *RED
+  terminal.ansiGreen: *GREEN
+  terminal.ansiYellow: *BLUE
   terminal.ansiBlue: *BLUE
   terminal.ansiMagenta: *MAGENTA
   terminal.ansiCyan: *CYAN
