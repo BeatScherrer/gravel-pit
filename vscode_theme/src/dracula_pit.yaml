@@ -9,29 +9,29 @@ gravelpit:
   # colors for terminal
   ansi:
     # black
-    - &COLOR0        '#282a2e' # black
-    - &COLOR8        '#555b65' # bright black
+    - &BLACK        '#282a2e' # black
+    - &BRIGHT_BLACK        '#555b65' # bright black
     # red
-    - &COLOR1        '#a54242' # red
-    - &COLOR9        '#cc6666' # bright red
+    - &RED       '#a54242' # red
+    - &BRIGHT_RED        '#cc6666' # bright red
     # green
-    - &COLOR2        '#8c9440' # green
-    - &COLOR10       '#b5bd68' # bright green 
+    - &GREEN       '#8c9440' # green
+    - &BRIGHT_GREEN     '#b5bd68' # bright green 
     # yellow
-    - &COLOR3        '#de935f' # yellow
-    - &COLOR11       '#ffeac3' # bright yellow
+    - &YELLOW       '#de935f' # yellow
+    - &BRIGHT_YELLOW       '#ffeac3' # bright yellow
     # blue
-    - &COLOR4        '#5f819d' # blue
-    - &COLOR12       '#81a2be' # bright blue
+    - &BLUE        '#5f819d' # blue
+    - &BRIGHT_BLUE       '#81a2be' # bright blue
     # magenta
-    - &COLOR5        '#85678f' # magenta
-    - &COLOR13       '#b294bb' # bright magenta
+    - &MAGENTA        '#85678f' # magenta
+    - &BRIGHT_MAGENTA       '#b294bb' # bright magenta
     # cyan
-    - &COLOR6        '#5e8d87' # cyan
-    - &COLOR14       '#8abeb7' # bright cyan
+    - &CYAN        '#5e8d87' # cyan
+    - &BRIGHT_CYAN       '#8abeb7' # bright cyan
     # white
-    - &COLOR7        '#707880' # white
-    - &COLOR15       '#c5c8c6' # bright white
+    - &WHITE        '#707880' # white
+    - &BRIGHT_WHITE       '#c5c8c6' # bright white
   # theme colors, using underline!
   base:
     - &BG        '#1d1f21'
@@ -53,7 +53,7 @@ gravelpit:
   other:
     - &LineHighlight '#44475A75'
     - &NonText       '#FFFFFF1A'
-    - &WHITE         '#FFFFFF'
+    - &WHITE_WHITE         '#FFFFFF'
     - &TAB_DROP_BG   '#44475A70'
     # UI Variants
     - &BGLighter     '#424450'
@@ -66,22 +66,22 @@ colors:
   # Integrated Terminal Colors
   terminal.background: *BG
   terminal.foreground: *FG
-  terminal.ansiBrightBlack: *COLOR8
-  terminal.ansiBrightRed: *COLOR9
-  terminal.ansiBrightGreen: *COLOR10
-  terminal.ansiBrightYellow: *COLOR11
-  terminal.ansiBrightBlue: *COLOR12
-  terminal.ansiBrightMagenta: *COLOR13
-  terminal.ansiBrightCyan: *COLOR14
-  terminal.ansiBrightWhite: *COLOR15
-  terminal.ansiBlack: *COLOR0
+  terminal.ansiBrightBlack: *BRIGHT_BLACK
+  terminal.ansiBrightRed: *BRIGHT_RED
+  terminal.ansiBrightGreen: *BRIGHT_GREEN
+  terminal.ansiBrightYellow: *BRIGHT_YELLOW
+  terminal.ansiBrightBlue: *BRIGHT_BLUE
+  terminal.ansiBrightMagenta: *BRIGHT_MAGENTA
+  terminal.ansiBrightCyan: *BRIGHT_CYAN
+  terminal.ansiBrightWhite: *BRIGHT_WHITE
+  terminal.ansiBlack: *BLACK
   terminal.ansiRed: *COLOR1
   terminal.ansiGreen: *COLOR2
   terminal.ansiYellow: *COLOR3
-  terminal.ansiBlue: *COLOR4
-  terminal.ansiMagenta: *COLOR5
-  terminal.ansiCyan: *COLOR6
-  terminal.ansiWhite: *COLOR7
+  terminal.ansiBlue: *BLUE
+  terminal.ansiMagenta: *MAGENTA
+  terminal.ansiCyan: *CYAN
+  terminal.ansiWhite: *WHITE
 
   # Contrast Colors
   contrastBorder: *BGDarker                                                     # An extra border around elements to separate them from others for greater contrast
@@ -200,7 +200,7 @@ colors:
   editor.wordHighlightStrongBackground: !alpha [ *COLOR_2, 50 ]                   # Background color of a symbol during write-access, for example when writing to a variable
 
   editor.findMatchBackground: !alpha [ *COLOR_3, 80 ]
-  editor.findMatchHighlightBackground: !alpha [ *WHITE, 40 ]                    # Color of the other search matches
+  editor.findMatchHighlightBackground: !alpha [ *WHITE_WHITE, 40 ]                    # Color of the other search matches
   editor.findRangeHighlightBackground: *LineHighlight                           # Color the range limiting the search
 
   editor.hoverHighlightBackground: !alpha [*COLOR_1, 50]                           # Highlight below the word for which a hover is shown
@@ -218,7 +218,7 @@ colors:
 
   editorWhitespace.foreground: *NonText                                         # Color of whitespace characters in the editor
   editorIndentGuide.background: *NonText                                        # Color of the editor indentation guides
-  editorIndentGuide.activeBackground: !alpha [ *WHITE, 45]                      # Color of the active indentation guide
+  editorIndentGuide.activeBackground: !alpha [ *WHITE_WHITE, 45]                      # Color of the active indentation guide
   editorRuler.foreground: *NonText                                              # Color of the editor rulers
 
   editorCodeLens.foreground: *COMMENT                                           # Foreground color of an editor CodeLens

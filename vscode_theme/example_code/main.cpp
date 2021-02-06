@@ -1,10 +1,19 @@
 #include <iostream>
 
+/**
+ * @brief 
+ * 
+ */
 class Student {
 
 public:
 Student() {}
 
+/**
+ * @brief Get the Name object
+ * 
+ * @return std::string 
+ */
 std::string getName() {return this->name_;}
 
 private:
