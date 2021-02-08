@@ -61,14 +61,16 @@ gravelpit:
     - &WHITE_WHITE   '#FFFFFF'
     - &TAB_DROP_BG   '#5e8d8787' # sRGB
     # UI Variants
-    - &BGLighter     '#5e8d87' 
+    - &BGLighter     '#383838' 
     - &BGLight       '#282a2e' # menu bar & dropdown
-    - &BGDark        '#282a2e' # file viewer
+    - &BGDark        '#252526' # file viewer
     - &BGDarker      '#191A21' # outlines
 
 # User Interface (more info: https://code.visualstudio.com/docs/getstarted/theme-color-reference)
 colors:
-  # Integrated Terminal Colors
+###########
+# Terminal
+###########
   terminal.background: *BG
   terminal.foreground: *FG
   terminal.ansiBrightBlack: *BRIGHT_BLACK
@@ -89,15 +91,15 @@ colors:
   terminal.ansiWhite: *WHITE
 
   # Contrast Colors
-  contrastBorder: *BGDarker                                                     # An extra border around elements to separate them from others for greater contrast
-  contrastActiveBorder:                                                         # An extra border around active elements to separate them from others for greater contrast
+  contrastBorder: *BGDarker
+  contrastActiveBorder:
 
   # Base Colors
-  focusBorder: *COMMENT                                                         # Overall border color for focused elements. This color is only used if not overridden by a component
-  foreground: *FG                                                               # Overall foreground color. This color is only used if not overridden by a component
-  widget.shadow:                                                                # Shadow color of widgets such as Find/Replace inside the editor
-  selection.background: *COLOR_5                                                 # Background color of text selections in the workbench (for input fields or text areas, does not apply to selections within the editor and the terminal)
-  errorForeground: *COLOR_6                                                         # Overall foreground color for error messages (this color is only used if not overridden by a component)
+  focusBorder: *COMMENT
+  foreground: *FG
+  widget.shadow:
+  selection.background: *COLOR_5 
+  errorForeground: *COLOR_6
 
   # Button Control
   button.background: *SELECTION
@@ -109,7 +111,7 @@ colors:
   dropdown.border: *BGDarker
   dropdown.foreground: *FG
 
-  # Input Control
+  # Input Control, ctrl + p e.g.
   input.background: *BG
   input.foreground: *FG
   input.border: *BGDarker
@@ -152,23 +154,26 @@ colors:
   list.hoverForeground:
   list.focusForeground:
 
+###########
+# Side Bar
+###########
   # Activity Bar
-  activityBar.background: *BGLight
+  activityBar.background: *BGDark
   activityBar.inactiveForeground: *COMMENT
   activityBar.dropBackground:
   activityBar.foreground: *FG
   activityBar.border:
-  activityBar.activeBorder: !alpha [*COLOR_4, 80]
-  activityBar.activeBackground: !alpha [*COLOR_5, 10]
-  activityBarBadge.background: *COLOR_4
+  activityBar.activeBorder: !alpha [*CYAN, 80]
+  activityBar.activeBackground: !alpha [*CYAN, 10]
+  activityBarBadge.background: *CYAN
   activityBarBadge.foreground: *FG
 
   # Side Bar
-  sideBar.background: *BGDark
+  sideBar.background: '#252526'
   sideBar.foreground:
   sideBar.border:
   sideBarTitle.foreground: *FG
-  sideBarSectionHeader.background: *BG
+  sideBarSectionHeader.background: *BGLighter
   sideBarSectionHeader.foreground:
   sideBarSectionHeader.border: *BGDarker
 
@@ -190,7 +195,9 @@ colors:
   tab.unfocusedActiveForeground:
   tab.unfocusedInactiveForeground:
 
-  # Editor Colors
+#########
+# Editor
+#########
   editor.foreground: *FG
   editor.background: *BG
   editorLineNumber.foreground: *COMMENT
@@ -404,17 +411,10 @@ colors:
   listFilterWidget.outline: *BGLighter
   listFilterWidget.noMatchesOutline: *COLOR_6
 
-# Syntaxes
-tokenColors:
-  - name: Test name
-    scope: 
-    - test scope
-    settings:
-      fontStyle: bold
-      foreground:
 ##########
 # General
 ##########
+tokenColors:
   - name: text
     scope: 
       - text
@@ -446,13 +446,23 @@ tokenColors:
       - variable
     settings:
       foreground: *COLOR_1
+  
+  - name: constants
+    scope: constant.language
+    settings:
+      foreground: *BRIGHT_RED
 
   - name: comment
     scope:
       - comment
-      - punctuation.definition.comment
+      - punctuationdefinition.comment
     settings:
       foreground: *COMMENT
+  - name: comment doc
+    scope:
+      - storage.type.class.doxygen
+    settings:
+      foreground: *WHITE
 
   - name: function
     scope:
@@ -582,7 +592,7 @@ tokenColors:
     scope:
       - keyword.cmake
     settings:
-      foreground: *BRIGHT_BLUE
+      foreground: *BRIGHT_RED
 
 #######
 # YAML
