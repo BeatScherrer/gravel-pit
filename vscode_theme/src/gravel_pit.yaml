@@ -41,16 +41,6 @@ gravelpit:
     - &SELECTION '#44475A'
     - &COMMENT   '#555b65'
 
-    - &COLOR_1   '#ffeac3' # types
-    - &COLOR_2   '#8abeb7' # functions
-    - &COLOR_3   '#81a2be' # args
-
-    - &COLOR_4   '#ffeac3' # keywords, operators
-    - &COLOR_5   '#a54242' # special keywords
-    - &COLOR_5   '#cc6666' # this
-    - &COLOR_6   '#cc6666' # errors
-    - &COLOR_7   '#8abeb7' # strings
-
   brightOther:
     # Temporary (awaiting fix)
     - &TEMP_QUOTES          '#E9F284'
@@ -68,6 +58,9 @@ gravelpit:
 
 # User Interface (more info: https://code.visualstudio.com/docs/getstarted/theme-color-reference)
 colors:
+
+### Overall ###
+
 ###########
 # Terminal
 ###########
@@ -98,8 +91,8 @@ colors:
   focusBorder: *COMMENT
   foreground: *FG
   widget.shadow:
-  selection.background: *COLOR_5 
-  errorForeground: *COLOR_6
+  selection.background: *CYAN
+  errorForeground: *BRIGHT_RED
 
   # Button Control
   button.background: *SELECTION
@@ -116,16 +109,16 @@ colors:
   input.foreground: *FG
   input.border: *BGDarker
   input.placeholderForeground: *COMMENT
-  inputOption.activeBorder: *COLOR_5
+  inputOption.activeBorder: *BRIGHT_RED
   inputValidation.infoForeground:
   inputValidation.infoBackground:
-  inputValidation.infoBorder: *COLOR_4
+  inputValidation.infoBorder: *BRIGHT_YELLOW
   inputValidation.warningForeground:
   inputValidation.warningBackground:
-  inputValidation.warningBorder: *COLOR_3
+  inputValidation.warningBorder: *BRIGHT_BLUE
   inputValidation.errorForeground:
   inputValidation.errorBackground:
-  inputValidation.errorBorder: *COLOR_6
+  inputValidation.errorBorder: *BRIGHT_RED
 
   # Scroll Bar Control
   scrollbar.shadow:
@@ -138,26 +131,26 @@ colors:
   badge.background: *SELECTION
 
   # Progress Bar
-  progressBar.background: *COLOR_4
+  progressBar.background: *BRIGHT_YELLOW
 
   # List & Trees
   list.activeSelectionBackground: *SELECTION
   list.activeSelectionForeground: *FG
   list.dropBackground: *SELECTION
   list.focusBackground: *LineHighlight
-  list.highlightForeground: *COLOR_1
+  list.highlightForeground: *BRIGHT_YELLOW
   list.hoverBackground: *LineHighlight
   list.inactiveSelectionBackground: *LineHighlight
   list.inactiveSelectionForeground:
-  list.warningForeground: *COLOR_3
-  list.errorForeground: *COLOR_6
+  list.warningForeground: *BRIGHT_BLUE
+  list.errorForeground: *BRIGHT_RED
   list.hoverForeground:
   list.focusForeground:
 
 ###########
 # Side Bar
 ###########
-  # Activity Bar
+  # Activity Bar (left)
   activityBar.background: *BGDark
   activityBar.inactiveForeground: *COMMENT
   activityBar.dropBackground:
@@ -179,7 +172,7 @@ colors:
 
   # Editor Group & Tabs
   editorGroup.background:
-  editorGroup.border: *COLOR_5
+  editorGroup.border: *COMMENT
   editorGroup.dropBackground: *TAB_DROP_BG
   editorGroupHeader.noTabsBackground:
   editorGroupHeader.tabsBackground: *BGDarker
@@ -187,7 +180,7 @@ colors:
   tab.activeBackground: *BG
   tab.activeForeground: *FG
   tab.border: *BGDarker
-  tab.activeBorderTop: !alpha [*COLOR_4, 80]
+  tab.activeBorderTop: !alpha [*BRIGHT_YELLOW, 80]
   tab.activeBorder:
   tab.unfocusedActiveBorder:
   tab.inactiveBackground: *BGDark
@@ -208,25 +201,25 @@ colors:
   editor.inactiveSelectionBackground:
   editor.foldBackground: *BGDark
 
-  editor.wordHighlightBackground: !alpha [ *COLOR_1, 50 ]
-  editor.wordHighlightStrongBackground: !alpha [ *COLOR_2, 50 ]
+  editor.wordHighlightBackground: !alpha [ *BRIGHT_YELLOW, 50 ]
+  editor.wordHighlightStrongBackground: !alpha [ *CYAN, 50 ]
 
-  editor.findMatchBackground: !alpha [ *COLOR_3, 80 ]
+  editor.findMatchBackground: !alpha [ *BRIGHT_BLUE, 80 ]
   editor.findMatchHighlightBackground: !alpha [ *WHITE_WHITE, 40 ]
   editor.findRangeHighlightBackground: *LineHighlight
 
-  editor.hoverHighlightBackground: !alpha [*COLOR_1, 50]
+  editor.hoverHighlightBackground: !alpha [*BRIGHT_YELLOW, 50]
 
   editor.lineHighlightBackground:
   editor.lineHighlightBorder: *SELECTION
 
-  editorLink.activeForeground: *COLOR_1
-  editor.rangeHighlightBackground: !alpha [ *COLOR_5, 15 ]
+  editorLink.activeForeground: *BRIGHT_YELLOW
+  editor.rangeHighlightBackground: !alpha [ *RED, 15 ]
 
   editor.snippetTabstopHighlightBackground: *BG
   editor.snippetTabstopHighlightBorder: *COMMENT
   editor.snippetFinalTabstopHighlightBackground: *BG
-  editor.snippetFinalTabstopHighlightBorder: *COLOR_2
+  editor.snippetFinalTabstopHighlightBorder: *CYAN
 
   editorWhitespace.foreground: *NonText
   editorIndentGuide.background: *NonText
@@ -244,40 +237,27 @@ colors:
   editorOverviewRuler.border: *BGDarker
   editorOverviewRuler.findMatchForeground:
   editorOverviewRuler.rangeHighlightForeground:
-  editorOverviewRuler.selectionHighlightForeground: *COLOR_3
-  editorOverviewRuler.wordHighlightForeground: *COLOR_1
-  editorOverviewRuler.wordHighlightStrongForeground: *COLOR_2
-  editorOverviewRuler.modifiedForeground: !alpha [ *COLOR_1, 80 ]
-  editorOverviewRuler.addedForeground:    !alpha [ *COLOR_2,  80 ]
-  editorOverviewRuler.deletedForeground:  !alpha [ *COLOR_6,    80 ]
-  editorOverviewRuler.errorForeground:    !alpha [ *COLOR_6,    80 ]
-  editorOverviewRuler.warningForeground:  !alpha [ *COLOR_3, 80 ]
-  editorOverviewRuler.infoForeground:     !alpha [ *COLOR_1,   80 ]
+  editorOverviewRuler.selectionHighlightForeground: *BRIGHT_BLUE
+  editorOverviewRuler.wordHighlightForeground: *BRIGHT_YELLOW
+  editorOverviewRuler.wordHighlightStrongForeground: *CYAN
+  editorOverviewRuler.modifiedForeground: !alpha [ *BRIGHT_YELLOW, 80 ]
+  editorOverviewRuler.addedForeground:    !alpha [ *CYAN,  80 ]
+  editorOverviewRuler.deletedForeground:  !alpha [ *BRIGHT_RED,    80 ]
+  editorOverviewRuler.errorForeground:    !alpha [ *BRIGHT_RED,    80 ]
+  editorOverviewRuler.warningForeground:  !alpha [ *BRIGHT_BLUE, 80 ]
+  editorOverviewRuler.infoForeground:     !alpha [ *BRIGHT_YELLOW,   80 ]
 
-  editorError.foreground: *COLOR_6
+  editorError.foreground: *BRIGHT_RED
   editorError.border:
-  editorWarning.foreground: *COLOR_1
+  editorWarning.foreground: *BRIGHT_YELLOW
   editorWarning.border:
 
   editorGutter.background:
-  editorGutter.modifiedBackground: !alpha [ *COLOR_1, 80 ]
-  editorGutter.addedBackground:    !alpha [ *COLOR_2,  80 ]
-  editorGutter.deletedBackground:  !alpha [ *COLOR_6,    80 ]
+  editorGutter.modifiedBackground: !alpha [ *BRIGHT_YELLOW, 80 ]
+  editorGutter.addedBackground:    !alpha [ *CYAN,  80 ]
+  editorGutter.deletedBackground:  !alpha [ *BRIGHT_RED,    80 ]
 
-  # Explorer Colors
-  gitDecoration.modifiedResourceForeground: *COLOR_1
-  gitDecoration.deletedResourceForeground: *COLOR_6
-  gitDecoration.untrackedResourceForeground: *COLOR_2
-  gitDecoration.ignoredResourceForeground: *COMMENT
-  gitDecoration.conflictingResourceForeground: *COLOR_3
-
-  # Diff Editor Colors
-  diffEditor.insertedTextBackground: !alpha [ *COLOR_2, 20 ]
-  diffEditor.insertedTextBorder:
-  diffEditor.removedTextBackground: !alpha [ *COLOR_6, 50 ]
-  diffEditor.removedTextBorder:
-
-  # Editor Widget Colors
+  # Editor Widget Colors (such as find/replace)
   editorWidget.background: *BGDark
   editorWidgetBorder:
 
@@ -301,46 +281,64 @@ colors:
   peekView.border: *SELECTION
   peekViewEditor.background: *BG
   peekViewEditorGutter.background:
-  peekViewEditor.matchHighlightBackground: !alpha [ *COLOR_7, 80 ]
+  peekViewEditor.matchHighlightBackground: !alpha [ *BRIGHT_CYAN, 80 ]
   peekViewResult.background: *BGDark
   peekViewResult.fileForeground: *FG
   peekViewResult.lineForeground: *FG
-  peekViewResult.matchHighlightBackground: !alpha [ *COLOR_7, 80 ]
+  peekViewResult.matchHighlightBackground: !alpha [ *BRIGHT_CYAN, 80 ]
   peekViewResult.selectionBackground: *SELECTION
   peekViewResult.selectionForeground: *FG
   peekViewTitle.background: *BGDarker
   peekViewTitleDescription.foreground: *COMMENT
   peekViewTitleLabel.foreground: *FG
 
+######
+# Git 
+######
+  # Explorer Colors
+  gitDecoration.modifiedResourceForeground: *YELLOW
+  gitDecoration.deletedResourceForeground: *BRIGHT_RED
+  gitDecoration.untrackedResourceForeground: *COMMENT
+  gitDecoration.ignoredResourceForeground: *COMMENT
+  gitDecoration.conflictingResourceForeground: *BRIGHT_BLUE
+
+  # Diff Editor Colors
+  diffEditor.insertedTextBackground: !alpha [ *CYAN, 20 ]
+  diffEditor.insertedTextBorder:
+  diffEditor.removedTextBackground: !alpha [ *BRIGHT_RED, 50 ]
+  diffEditor.removedTextBorder:
+
   # Merge Conflicts
-  merge.currentHeaderBackground: !alpha [ *COLOR_2, 90 ]
+  merge.currentHeaderBackground: !alpha [ *CYAN, 90 ]
   merge.currentContentBackground:
-  merge.incomingHeaderBackground: !alpha [ *COLOR_5, 90 ]
+  merge.incomingHeaderBackground: !alpha [ *RED, 90 ]
   merge.incomingContentBackground:
   merge.border:
-  editorOverviewRuler.currentContentForeground: *COLOR_2
-  editorOverviewRuler.incomingContentForeground: *COLOR_5
+  editorOverviewRuler.currentContentForeground: *CYAN
+  editorOverviewRuler.incomingContentForeground: *RED
 
-  # Panel Colors
+  # Panel Colors (such as terminal)
   panel.background: *BG
-  panel.border: *COLOR_5
-  panelTitle.activeBorder: *COLOR_4
+  panel.border: *CYAN
+  panelTitle.activeBorder: *BRIGHT_YELLOW
   panelTitle.activeForeground: *FG
   panelTitle.inactiveForeground: *COMMENT
 
-  # Status Bar Colors
-  statusBar.background: *BGDarker
+#############
+# Status Bar
+#############
+  statusBar.background: *BG
   statusBar.foreground: *FG
-  statusBar.debuggingBackground: *COLOR_6
+  statusBar.debuggingBackground: *MAGENTA
   statusBar.debuggingForeground: *BGDarker
   statusBar.noFolderBackground: *BGDarker
   statusBar.noFolderForeground: *FG
   statusBarItem.activeBackground:
   statusBarItem.hoverBackground:
-  statusBarItem.prominentBackground: *COLOR_6
-  statusBarItem.prominentHoverBackground: *COLOR_3
-  statusBarItem.remoteForeground: *FG
-  statusBarItem.remoteBackground: *COLOR_5
+  statusBarItem.prominentBackground: *BRIGHT_YELLOW
+  statusBarItem.prominentHoverBackground: *BRIGHT_BLUE
+  statusBarItem.remoteForeground: *BGDark
+  statusBarItem.remoteBackground: *CYAN
   statusBar.border:
 
   # Title Bar Colors (MacOS Only)
@@ -349,27 +347,32 @@ colors:
   titleBar.inactiveBackground: *BGDarker
   titleBar.inactiveForeground: *COMMENT
 
+################
+# Notifications
+################
   # Notification Dialog Colors
   notification.background: *BG
   notification.foreground: *FG
   notification.buttonBackground: *SELECTION
   notification.buttonForeground: *FG
   notification.buttonHoverBackground: *LineHighlight
-  notification.errorBackground: *COLOR_6
+  notification.errorBackground: *BRIGHT_RED
   notification.errorForeground: *FG
-  notification.infoBackground: *COLOR_1
+  notification.infoBackground: *BRIGHT_YELLOW
   notification.infoForeground: *BG
-  notification.warningBackground: *COLOR_3
+  notification.warningBackground: *BRIGHT_BLUE
   notification.warningForeground: *BG
 
+  #############
   # Extensions
+  #############
   extensionButton.prominentForeground: *FG
-  extensionButton.prominentBackground: !alpha [ *COLOR_2, 90 ]
-  extensionButton.prominentHoverBackground: !alpha [ *COLOR_2, 60 ]
+  extensionButton.prominentBackground: !alpha [ *CYAN, 90 ]
+  extensionButton.prominentHoverBackground: !alpha [ *CYAN, 60 ]
 
   # Quick Picker
-  pickerGroup.border: *COLOR_5
-  pickerGroup.foreground: *COLOR_1
+  pickerGroup.border: *RED
+  pickerGroup.foreground: *BRIGHT_YELLOW
 
   # Debug
   debugToolBar.background: *BGDark
@@ -379,10 +382,12 @@ colors:
   welcomePage.buttonHoverBackground:
   walkThrough.embeddedEditorBackground: *BGDark
 
-  # Setting Editor
+  #################
+  # Settings Editor
+  #################
   settings.headerForeground:           *FG
-  settings.modifiedItemForeground:     *COLOR_3
-  settings.modifiedItemIndicator:      *COLOR_3
+  settings.modifiedItemForeground:     *BRIGHT_BLUE
+  settings.modifiedItemIndicator:      *BRIGHT_BLUE
   settings.inactiveSelectedItemBorder:
   settings.dropdownBackground:         *BGDark
   settings.dropdownForeground:         *FG
@@ -409,7 +414,9 @@ colors:
 
   listFilterWidget.background: *BGLight
   listFilterWidget.outline: *BGLighter
-  listFilterWidget.noMatchesOutline: *COLOR_6
+  listFilterWidget.noMatchesOutline: *BRIGHT_RED
+
+### Token Colors ###
 
 ##########
 # General
@@ -433,19 +440,19 @@ tokenColors:
     scope:
       - punctuation
     settings:
-      foreground: *COLOR_1
+      foreground: *BRIGHT_YELLOW
 
   - name: string
     scope:
       - string
     settings:
-      foreground: *COLOR_2
+      foreground: *CYAN
 
   - name: variable
     scope:
       - variable
     settings:
-      foreground: *COLOR_1
+      foreground: *BRIGHT_YELLOW
   
   - name: constants
     scope: constant.language
@@ -455,7 +462,7 @@ tokenColors:
   - name: comment
     scope:
       - comment
-      - punctuationdefinition.comment
+      - punctuation.definition.comment
     settings:
       foreground: *COMMENT
   - name: comment doc
@@ -469,7 +476,7 @@ tokenColors:
       - support.function
       - entity.name.function
     settings:
-      foreground: *COLOR_3
+      foreground: *BRIGHT_BLUE
 
   - name: tag
     scope:
@@ -531,7 +538,7 @@ tokenColors:
     scope:
       - markup.heading
     settings:
-      foreground: *COLOR_1
+      foreground: *BRIGHT_YELLOW
   - name: code
     scope:
       - markup.fenced_code
