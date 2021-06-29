@@ -17,9 +17,14 @@
     "contributes": {
         "themes": [
             {
-                "label": "gravel-pit",
+                "label": "gravel-pit dark",
                 "uiTheme": "vs-dark",
                 "path": "./theme/gravel_pit_dark.json"
+            },
+            {
+                "label": "gravel-pit light",
+                "uiTheme": "vs",
+                "path": "./theme/gravel_pit_light.json"
             },
             {
                 "label": "dracula-pit",

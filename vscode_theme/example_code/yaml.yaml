@@ -1,0 +1,14 @@
+$schema: vscode://schemas/color-theme
+name: gravel pit
+author: Beat Scherrer
+maintainers:
+  - Beat Scherrer <beat.scherrer@gmail.com>
+semanticClass: theme.gravelpit
+semanticHighlighting: true
+gravelpit:
+  # colors for terminal
+  ansi:
+    # black
+    - &COLOR0        '#282a2e' # black
+    - &COLOR8        '#555b65' # bright black
+    # red

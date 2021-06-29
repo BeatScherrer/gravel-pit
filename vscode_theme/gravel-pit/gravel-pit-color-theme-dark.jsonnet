@@ -36,7 +36,7 @@ local color = {
   color_1: color.red,
   color_2: color.bright_yellow,
   color_3: color.bright_blue,
-  color_4: "",
+  color_4: color.bright_green,
   color_5: "",
   color_6: "",
   color_7: "",
@@ -76,7 +76,7 @@ local color = {
     "terminal.ansiBlue": color.blue,
     "terminal.ansiBrightBlue": color.color_3,
     "terminal.ansiGreen": color.green,
-    "terminal.ansiBrightGreen": color.bright_green,
+    "terminal.ansiBrightGreen": color.color_4,
     "terminal.ansiMagenta": color.magenta,
     "terminal.ansiBrightMagenta": color.bright_magenta,
     "terminal.ansiRed": color.color_1,
@@ -197,7 +197,7 @@ local color = {
       settings: {
         foreground: color.bright_magenta
       },
-    }, 
+    },
     {
       name: "list",
       scope: [
@@ -205,7 +205,7 @@ local color = {
         "punctuation.list"
       ],
       settings: {
-        foreground: color.bright_green
+        foreground: color.color_4
       },
     },
     {
@@ -224,7 +224,7 @@ local color = {
         "markup.italic"
       ],
       settings: {
-        foreground: color.bright_green,
+        foreground: color.color_4,
         fontStyle: 'italic'
       },
     },
@@ -340,7 +340,7 @@ local color = {
         "entity.name.function.java",
       ],
       settings: {
-        foreground: color.bright_green
+        foreground: color.color_4
       }
     },
     {
@@ -380,7 +380,7 @@ local color = {
         "entity.name.type.inherited"
       ],
       settings: {
-        foreground: color.bright_green,
+        foreground: color.color_4,
         fontStyle: "italic"
       }
     },
