@@ -244,8 +244,10 @@ prompt_aws() {
 
 prompt_chroot() {
 
-  if [[ -n "$CHROOT" ]]; then
-    prompt_segment red yellow "$CHROOT"
+  local chroot_name="$SCHROOT_CHROOT_NAME"
+
+  if [[ -n "$chroot_name" ]]; then
+    prompt_segment red yellow "$chroot_name"
   fi
 }
 
